@@ -13,7 +13,8 @@ dep "main" do
 
   # web
   requires "Google Chrome.app",
-           "Firefox.app"
+           "Firefox.app",
+           "Skype.app"
 
   # dev
   requires "rvm",

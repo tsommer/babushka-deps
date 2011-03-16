@@ -6,3 +6,6 @@ dep "Firefox.app" do
   source "http://mozilla.lagis.at/firefox/releases/4.0b12/mac/en-US/Firefox%204.0%20Beta%2012.dmg"
 end
 
+dep "Skype.app" do
+  source "http://www.skype.com/go/getskype-macosx.dmg"
+end

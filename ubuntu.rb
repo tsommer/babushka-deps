@@ -1,4 +1,5 @@
 dep "ubuntu" do
-  requires "rvm",
-           "mysql"
+  requires "rvm"
+
+  requires "benhoskings:mysql.managed"
 end

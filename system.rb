@@ -33,4 +33,3 @@ end
 dep "Alfred.app" do
   source "http://media.alfredapp.com/alfred_0.8.2_107.dmg"
 end
-

@@ -32,5 +32,3 @@ dep "VirtualBox.installer" do
   source "http://download.virtualbox.org/virtualbox/4.0.4/VirtualBox-4.0.4-70112-OSX.dmg"
   met? { "/Applications/VirtualBox.app".p.exists? }
 end
-
-dep "mysql", :template => "managed"
