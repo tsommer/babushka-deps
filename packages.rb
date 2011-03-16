@@ -1,0 +1,2 @@
+dep "wget", :template => "managed"
+
