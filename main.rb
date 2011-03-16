@@ -1,8 +1,4 @@
 dep "main" do
-  requires "apps"
-end
-
-dep "apps" do
 
   # packages
   requires "wget"
