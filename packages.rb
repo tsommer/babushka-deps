@@ -33,3 +33,7 @@ end
 dep "libreadline6-dev.managed" do
   "/lib/libreadline.so.6".p.exist?
 end
+
+dep "sphinx.managed" do
+  provides "searchd"
+end
