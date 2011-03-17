@@ -4,7 +4,7 @@ dep "ubuntu" do
            "libssl-dev.managed",
            "libopenssl-ruby.managed",
            "libcurl4-openssl-dev.managed",
-           "libreadline5.managed",
+           "libreadline6-dev.managed",
            "rvm"
 
   requires "benhoskings:mysql.managed"
