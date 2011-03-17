@@ -18,4 +18,18 @@ dep "libssl-dev.managed" do
   }
 end
 
-dep "libopenssl-ruby.managed"
+dep "libopenssl-ruby.managed" do
+  met? {
+    "/usr/share/doc/libopenssl-ruby/copyright".p.exist?
+  }
+end
+
+dep "libcurl4-openssl-dev.managed" do
+  met? {
+    "/usr/bin/curl-config".p.exist?
+  }
+end
+
+dep "libreadline5.managed" do
+  "/lib/libreadline.so.5".p.exist?
+end
