@@ -31,5 +31,5 @@ dep "libcurl4-openssl-dev.managed" do
 end
 
 dep "libreadline5.managed" do
-  "/lib/libreadline.so.5".p.exist?
+  "/lib/libreadline.so.6".p.exist?
 end
