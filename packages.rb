@@ -31,7 +31,9 @@ dep "libcurl4-openssl-dev.managed" do
 end
 
 dep "libreadline6-dev.managed" do
-  "/usr/share/readline".p.exist?
+  met? {
+    "/lib/libreadline.so.6".p.exist?
+  }
 end
 
 dep "sphinx.managed" do
