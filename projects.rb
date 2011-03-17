@@ -1,5 +1,5 @@
 dep "jasper" do
   requires "ubuntu"
   
-  requires "sphinx.managed"
+  requires "sphinx.src"
 end

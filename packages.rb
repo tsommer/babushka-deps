@@ -36,6 +36,7 @@ dep "libreadline6-dev.managed" do
   }
 end
 
-dep "sphinx.managed" do
+dep "sphinx.src" do
+  source "http://sphinxsearch.com/files/sphinx-0.9.9.tar.gz"
   provides "searchd"
 end
