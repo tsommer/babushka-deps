@@ -48,3 +48,9 @@ end
 dep "openjdk-6-jdk.managed" do
   provides ["java", "javac"]
 end
+
+dep "libfreeimage-dev.managed" do
+  met? {
+    "FreeImage.h".p.exist?
+  }
+end
