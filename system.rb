@@ -33,3 +33,12 @@ end
 dep "Alfred.app" do
   source "http://media.alfredapp.com/alfred_0.8.2_107.dmg"
 end
+
+dep "Growl.installer" do
+  source "http://growl.cachefly.net/Growl-1.2.1.dmg"
+  provides "growlnotify"
+end
+
+dep "iStat Menus.app" do
+  source "http://s3.amazonaws.com/bjango/files/istatmenus3/istatmenus3.16.zip"
+end

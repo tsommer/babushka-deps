@@ -9,7 +9,9 @@ dep "main" do
            "Dropbox.app",
            "KeyRemap4MacBook.installer",
            "PCKeyboardHack.installer",
-           "Alfred.app"
+           "Alfred.app",
+           "Growl.installer",
+           "iStat Menus.app"
 
   # web
   requires "Google Chrome.app",
