@@ -4,3 +4,9 @@ dep "jasper" do
   requires "sphinx.src",
            "imagemagick.managed"
 end
+
+dep "dma" do
+  requires "ubuntu"
+  
+  requires "openjdk-6-jdk.managed"
+end
