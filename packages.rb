@@ -45,4 +45,6 @@ dep "imagemagick.managed" do
   provides ["identify", "convert"]
 end
 
-dep "openjdk-6-jdk.managed"
+dep "openjdk-6-jdk.managed" do
+  provides ["java", "javac"]
+end
