@@ -14,5 +14,6 @@ end
 dep "radiopaedia" do
   requires "ubuntu"
 
-  requires "libfreeimage-dev.managed"
+  requires "sphinx.src",
+           "libfreeimage-dev.managed"
 end

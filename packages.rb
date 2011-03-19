@@ -51,6 +51,6 @@ end
 
 dep "libfreeimage-dev.managed" do
   met? {
-    "FreeImage.h".p.exist?
+    "/usr/include/FreeImage.h".p.exist?
   }
 end
