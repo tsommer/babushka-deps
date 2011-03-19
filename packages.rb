@@ -40,3 +40,7 @@ dep "sphinx.src" do
   source "http://sphinxsearch.com/files/sphinx-0.9.9.tar.gz"
   provides "searchd"
 end
+
+dep "imagemagick.managed" do
+  provides ["identify", "convert"]
+end
