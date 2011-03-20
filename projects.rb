@@ -25,5 +25,6 @@ end
 dep "jasperdocs" do
   requires "ubuntu-java"
   
-  requires "libmagick9-dev.managed"
+  requires "sphinx.src",
+           "libmagick9-dev.managed"
 end
