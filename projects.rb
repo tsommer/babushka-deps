@@ -24,4 +24,6 @@ end
 
 dep "jasperdocs" do
   requires "ubuntu-java"
+  
+  requires "libmagick9-dev.managed"
 end

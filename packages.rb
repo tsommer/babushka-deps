@@ -54,3 +54,7 @@ dep "libfreeimage-dev.managed" do
     "/usr/include/FreeImage.h".p.exist?
   }
 end
+
+dep "libmagick9-dev.managed" do
+  provides "Magick-config"
+end
