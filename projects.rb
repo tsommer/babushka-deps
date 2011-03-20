@@ -1,3 +1,9 @@
+dep "ubuntu-java" do
+  requires "ubuntu"
+
+  requires "openjdk-6-jdk.managed"
+end
+
 dep "jasper" do
   requires "ubuntu"
 
@@ -6,9 +12,7 @@ dep "jasper" do
 end
 
 dep "dma" do
-  requires "ubuntu"
-
-  requires "openjdk-6-jdk.managed"
+  requires "ubuntu-java"
 end
 
 dep "radiopaedia" do
@@ -16,4 +20,8 @@ dep "radiopaedia" do
 
   requires "sphinx.src",
            "libfreeimage-dev.managed"
+end
+
+dep "jasperdocs" do
+  requires "ubuntu-java"
 end
