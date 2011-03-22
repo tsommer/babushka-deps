@@ -11,7 +11,9 @@ dep "main" do
            "PCKeyboardHack.installer",
            "Alfred.app",
            "Growl.installer",
-           "iStat Menus.app"
+           "iStat Menus.app",
+           "Jumpcut.app",
+           "NeoOffice.installer"
 
   # web
   requires "Google Chrome.app",

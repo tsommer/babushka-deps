@@ -42,3 +42,14 @@ end
 dep "iStat Menus.app" do
   source "http://s3.amazonaws.com/bjango/files/istatmenus3/istatmenus3.16.zip"
 end
+
+dep "Jumpcut.app" do
+  source "http://downloads.sourceforge.net/jumpcut/Jumpcut_0.63.tgz"
+end
+
+dep "NeoOffice.installer" do
+  source "http://neooffice.trideja.com/NeoOffice-3.2_Beta-Intel.dmg"
+  met? {
+    "/Applications/NeoOffice.app".p.exist?
+  }
+end
