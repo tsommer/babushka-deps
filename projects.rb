@@ -32,5 +32,6 @@ end
 dep "cafeconcierge" do
   requires "ubuntu"
   
-  requires "libmemcached-dev"
+  requires "libsasl2-dev.managed",
+           "libmemcached-dev.managed"
 end

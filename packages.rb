@@ -59,8 +59,14 @@ dep "libmagick9-dev.managed" do
   provides "Magick-config"
 end
 
-dep "libmemcached-dev" do
+dep "libsasl2-dev.managed" do
   met? {
-    "/memcached".p.exist?
+    "/usr/lib/libsasl2.a".p.exist?
+  }
+end
+
+dep "libmemcached-dev.managed" do
+  met? {
+    "/usr/lib/libmemcached.so.2".p.exist?
   }
 end
