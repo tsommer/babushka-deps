@@ -28,3 +28,9 @@ dep "jasperdocs" do
   requires "sphinx.src",
            "libmagick9-dev.managed"
 end
+
+dep "cafeconcierge" do
+  requires "ubuntu"
+  
+  requires "libmemcached-dev"
+end

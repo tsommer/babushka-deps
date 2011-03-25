@@ -58,3 +58,9 @@ end
 dep "libmagick9-dev.managed" do
   provides "Magick-config"
 end
+
+dep "libmemcached-dev" do
+  met? {
+    "/memcached".p.exist?
+  }
+end
