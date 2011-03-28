@@ -62,7 +62,9 @@ dep "libfreeimage-dev.managed" do
 end
 
 dep "libmagick9-dev.managed" do
-  provides "Magick-config"
+  met? {
+    "/usr/bin/Magick-config".p.exist?
+  }
 end
 
 dep "libsasl2-dev.managed" do
