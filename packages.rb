@@ -30,6 +30,12 @@ dep "libcurl4-openssl-dev.managed" do
   }
 end
 
+dep "libreadline5-dev.managed" do
+  met? {
+    "/lib/libreadline.so.6".p.exist?
+  }  
+end
+
 dep "libreadline6-dev.managed" do
   met? {
     "/lib/libreadline.so.6".p.exist?
