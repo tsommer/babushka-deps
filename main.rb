@@ -1,7 +1,8 @@
 dep "main" do
 
   # packages
-  requires "wget"
+  requires "wget",
+           "ack"
 
   # system
   requires "iTerm.app",

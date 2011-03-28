@@ -70,3 +70,5 @@ dep "libmemcached-dev.managed" do
     "/usr/lib/libmemcached.so.2".p.exist?
   }
 end
+
+dep "ack", :template => "managed"
