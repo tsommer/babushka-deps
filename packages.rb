@@ -32,7 +32,7 @@ end
 
 dep "libreadline5-dev.managed" do
   met? {
-    "/lib/libreadline.so.5".p.exist?
+    "/usr/lib/libreadline.so".p.exist?
   }  
 end
 
