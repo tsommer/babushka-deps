@@ -1,9 +1,3 @@
-dep "ubuntu-java" do
-  requires "ubuntu"
-
-  requires "openjdk-6-jdk.managed"
-end
-
 dep "jasper" do
   requires "ubuntu"
 

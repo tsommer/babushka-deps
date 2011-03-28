@@ -9,3 +9,9 @@ dep "ubuntu" do
 
   requires "benhoskings:mysql.managed"
 end
+
+dep "ubuntu-java" do
+  requires "ubuntu"
+
+  requires "openjdk-6-jdk.managed"
+end
