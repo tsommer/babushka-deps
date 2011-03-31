@@ -8,7 +8,7 @@ dep "oh-my-zsh" do
   }
 
   meet {
-    shell "wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh"
+    shell "wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O --no-check-certificate - | sh"
   }
 end
 
