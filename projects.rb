@@ -27,5 +27,6 @@ dep "cafeconcierge" do
   requires "ubuntu"
   
   requires "libsasl2-dev.managed",
-           "libmemcached-dev.managed"
+           "libmemcached-dev.managed",
+           "sqlite"
 end

@@ -80,3 +80,15 @@ dep "libmemcached-dev.managed" do
 end
 
 dep "ack", :template => "managed"
+
+dep "libsqlite3-dev.managed" do
+  met? {
+    "/usr/include/sqlite3.h".p.exist?
+  }
+end
+
+dep "sqlite3", :template => "managed"
+
+dep "sqlite" do
+  requires "sqlite3", "libsqlite3-dev.managed"
+end
