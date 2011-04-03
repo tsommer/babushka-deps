@@ -53,3 +53,10 @@ dep "NeoOffice.installer" do
     "/Applications/NeoOffice.app".p.exist?
   }
 end
+
+dep "AUSkey_Software.installer" do
+  source "https://www.auskey.abr.gov.au/plugin/AUSkey_software.dmg"
+  met? {
+    "~/Library/Application\ Support/AUSkey".p.exist?
+  }
+end

@@ -14,7 +14,8 @@ dep "main" do
            "Growl.installer",
            "iStat Menus.app",
            "Jumpcut.app",
-           "NeoOffice.installer"
+           "NeoOffice.installer",
+           "AUSkey_Software.installer"
 
   # web
   requires "Google Chrome.app",
