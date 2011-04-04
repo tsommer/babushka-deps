@@ -60,3 +60,7 @@ dep "AUSkey_Software.installer" do
     "~/Library/Application\ Support/AUSkey".p.exist?
   }
 end
+
+dep "CoRD.app" do
+  source "http://internode.dl.sourceforge.net/project/cord/cord/0.5.4/CoRD_0.5.4.zip"
+end
