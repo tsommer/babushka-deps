@@ -13,7 +13,6 @@ dep "main" do
            "Alfred.app",
            "Growl.installer",
            "iStat Menus.app",
-           "Jumpcut.app",
            "NeoOffice.installer",
            "AUSkey_Software.installer",
            "CoRD.app"
