@@ -20,7 +20,8 @@ dep "jasperdocs" do
   requires "ubuntu-java"
   
   requires "sphinx.src",
-           "libmagick9-dev.managed"
+           "libmagick9-dev.managed",
+           "redis-server"
 end
 
 dep "cafeconcierge" do

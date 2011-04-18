@@ -92,3 +92,5 @@ dep "sqlite3", :template => "managed"
 dep "sqlite" do
   requires "sqlite3", "libsqlite3-dev.managed"
 end
+
+dep "redis-server", :template => "managed"
