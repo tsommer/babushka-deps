@@ -64,3 +64,7 @@ end
 dep "CoRD.app" do
   source "http://internode.dl.sourceforge.net/project/cord/cord/0.5.4/CoRD_0.5.4.zip"
 end
+
+dep "Acorn.app" do
+  source "http://flyingmeat.com/download/Acorn.zip"
+end

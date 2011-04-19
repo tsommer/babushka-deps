@@ -15,7 +15,7 @@ dep "main" do
            "iStat Menus.app",
            "NeoOffice.installer",
            "AUSkey_Software.installer",
-           "CoRD.app"
+           "Acorn.app"
 
   # web
   requires "Google Chrome.app",
@@ -29,5 +29,6 @@ dep "main" do
            "Sequel Pro.app",
            "GitX.app",
            "HTTP Client.app",
-           "VirtualBox.installer"
+           "VirtualBox.installer",
+           "CoRD.app"
 end
