@@ -4,7 +4,7 @@ dep "rvm" do
   }
 
   meet {
-    shell 'bash -c "`curl http://rvm.beginrescueend.com/releases/rvm-install-head`"'
+    shell 'bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)'
   }
 end
 

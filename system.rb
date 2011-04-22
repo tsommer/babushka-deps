@@ -48,7 +48,7 @@ dep "Jumpcut.app" do
 end
 
 dep "NeoOffice.installer" do
-  source "http://neooffice.trideja.com/NeoOffice-3.2_Beta-Intel.dmg"
+  source "http://neooffice.trideja.com/NeoOffice-3.1.2-Intel.dmg"
   met? {
     "/Applications/NeoOffice.app".p.exist?
   }
