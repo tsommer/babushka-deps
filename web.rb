@@ -3,7 +3,7 @@ dep "Google Chrome.app" do
 end
 
 dep "Firefox.app" do
-  source "http://mozilla.lagis.at/firefox/releases/4.0b12/mac/en-US/Firefox%204.0%20Beta%2012.dmg"
+  source "http://mozilla.ftp.halifax.rwth-aachen.de/mozilla/firefox/releases/4.0/mac/en-US/Firefox%204.0.dmg"
 end
 
 dep "Skype.app" do

@@ -8,7 +8,6 @@ dep "main" do
   requires "iTerm.app",
            "oh-my-zsh",
            "Dropbox.app",
-           "KeyRemap4MacBook.installer",
            "PCKeyboardHack.installer",
            "Alfred.app",
            "Growl.installer",

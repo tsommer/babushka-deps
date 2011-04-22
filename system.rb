@@ -1,5 +1,5 @@
 dep "iTerm.app" do
-  source "http://iterm2.googlecode.com/files/iTerm2-alpha17.zip"
+  source "http://iterm2.googlecode.com/files/iTerm2-beta1.zip"
 end
 
 dep "oh-my-zsh" do
@@ -13,7 +13,7 @@ dep "oh-my-zsh" do
 end
 
 dep "Dropbox.app" do
-  source "http://cdn.dropbox.com/Dropbox%201.0.20.dmg"
+  source "http://cdn.dropbox.com/Dropbox%201.1.24.dmg"
 end
 
 dep "KeyRemap4MacBook.installer" do

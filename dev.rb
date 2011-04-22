@@ -13,7 +13,7 @@ dep "TextMate.app" do
 end
 
 dep "Sublime Text 2.app" do
-  source "http://www.sublimetext.com/Sublime%20Text%202%20Build%202047.dmg"
+  source "http://www.sublimetext.com/Sublime%20Text%202%20Build%202051.dmg"
 end
 
 dep "Sequel Pro.app" do
@@ -29,6 +29,6 @@ dep "HTTP Client.app" do
 end
 
 dep "VirtualBox.installer" do
-  source "http://download.virtualbox.org/virtualbox/4.0.4/VirtualBox-4.0.4-70112-OSX.dmg"
+  source "http://download.virtualbox.org/virtualbox/4.0.6/VirtualBox-4.0.6-71344-OSX.dmg"
   met? { "/Applications/VirtualBox.app".p.exists? }
 end
