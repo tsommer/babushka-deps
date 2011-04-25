@@ -68,3 +68,17 @@ end
 dep "Acorn.app" do
   source "http://flyingmeat.com/download/Acorn.zip"
 end
+
+dep "Perian.installer" do
+  source "http://perian.cachefly.net/Perian_1.2.2.dmg"
+  met? {
+    "/Library/PreferencePanes/Perian.prefPane".p.exist?
+  }
+end
+
+dep "EarthDesk.installer" do
+  source "http://mirror.xericdesign.com/software/earthdesk.dmg"
+  met? {
+    "/Library/PreferencePanes/EarthDesk.prefPane".p.exist?
+  }
+end

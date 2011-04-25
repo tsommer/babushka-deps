@@ -14,7 +14,8 @@ dep "main" do
            "iStat Menus.app",
            "NeoOffice.installer",
            "AUSkey_Software.installer",
-           "Acorn.app"
+           "Acorn.app",
+           "Perian.installer"
 
   # web
   requires "Google Chrome.app",
