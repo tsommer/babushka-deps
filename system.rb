@@ -82,3 +82,7 @@ dep "EarthDesk.installer" do
     "/Library/PreferencePanes/EarthDesk.prefPane".p.exist?
   }
 end
+
+dep "Vico.app" do
+  source "http://www.vicoapp.com/download/vico-r1771.dmg"
+end

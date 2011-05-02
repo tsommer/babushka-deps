@@ -30,5 +30,6 @@ dep "main" do
            "GitX.app",
            "HTTP Client.app",
            "VirtualBox.installer",
-           "CoRD.app"
+           "CoRD.app",
+           "Vico.app"
 end
