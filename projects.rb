@@ -24,6 +24,12 @@ dep "jasperdocs" do
            "redis-server"
 end
 
+dep "wildiaries" do
+  requires "ubuntu"
+  
+  requires "libmagick9-dev.managed"
+end
+
 dep "cafeconcierge" do
   requires "ubuntu"
   
