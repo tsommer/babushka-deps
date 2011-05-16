@@ -96,3 +96,5 @@ end
 dep "redis-server", :template => "managed"
 
 dep "firefox", :template => "managed"
+
+dep "xvfb", :template => "managed"

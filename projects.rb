@@ -41,5 +41,6 @@ end
 dep "dma" do
   requires "ubuntu-java"
 
-  requires "firefox"
+  requires "firefox",
+           "xvfb"
 end
