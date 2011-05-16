@@ -37,3 +37,9 @@ dep "cafeconcierge" do
            "libmemcached-dev.managed",
            "sqlite"
 end
+
+dep "dma" do
+  requires "ubuntu-java"
+
+  requires "firefox"
+end

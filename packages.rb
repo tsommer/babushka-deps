@@ -94,3 +94,5 @@ dep "sqlite" do
 end
 
 dep "redis-server", :template => "managed"
+
+dep "firefox", :template => "managed"
