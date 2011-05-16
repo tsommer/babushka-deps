@@ -5,10 +5,6 @@ dep "jasper" do
            "imagemagick.managed"
 end
 
-dep "dma" do
-  requires "ubuntu-java"
-end
-
 dep "radiopaedia" do
   requires "ubuntu"
 
