@@ -38,5 +38,5 @@ dep "dma" do
   requires "ubuntu-java"
 
   requires "firefox",
-           "xvfb"
+           "xvfb.managed"
 end
