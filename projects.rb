@@ -18,7 +18,7 @@ dep "jasperdocs" do
   requires "sphinx.src",
            "libmagick9-dev.managed",
            "redis-server",
-           "nodejs.src"
+           "coffeescript.src"
 end
 
 dep "wildiaries" do

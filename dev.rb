@@ -32,3 +32,14 @@ dep "VirtualBox.installer" do
   source "http://download.virtualbox.org/virtualbox/4.0.6/VirtualBox-4.0.6-71344-OSX.dmg"
   met? { "/Applications/VirtualBox.app".p.exists? }
 end
+
+dep "coffeescript.src" do
+  requires "benhoskings:nodejs.src"
+
+  source 'git://github.com/jashkenas/coffee-script.git'
+  provides 'coffee ~> 1.1.1'
+
+  configure { true }
+  build { shell "bin/cake build" }
+  install { shell "bin/cake install" }
+end
