@@ -95,8 +95,6 @@ end
 
 dep "redis-server", :template => "managed"
 
-dep "firefox", :template => "managed"
-
 dep "xvfb.managed" do
   met? {
     "/usr/bin/Xvfb".p.exist?
