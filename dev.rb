@@ -43,3 +43,7 @@ dep "coffeescript.src" do
   build { shell "bin/cake build" }
   install { shell "bin/cake install" }
 end
+
+dep "Viscosity.app" do
+  source "http://www.thesparklabs.com/downloads/Viscosity1.3.1.dmg"
+end
