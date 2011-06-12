@@ -31,6 +31,5 @@ dep "main" do
            "HTTP Client.app",
            "VirtualBox.installer",
            "CoRD.app",
-           "Vico.app",
-           "Viscosity.app"
+           "Vico.app"
 end
