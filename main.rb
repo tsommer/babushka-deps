@@ -15,7 +15,8 @@ dep "main" do
            "NeoOffice.installer",
            "AUSkey_Software.installer",
            "Acorn.app",
-           "Perian.installer"
+           "Perian.installer",
+           "GrandPerspective.app"
 
   # web
   requires "Google Chrome.app",

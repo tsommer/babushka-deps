@@ -86,3 +86,7 @@ end
 dep "Vico.app" do
   source "http://www.vicoapp.com/download/vico-r1771.dmg"
 end
+
+dep "GrandPerspective.app" do
+  source "http://downloads.sourceforge.net/project/grandperspectiv/grandperspective/1.3.3/GrandPerspective-1_3_3.dmg"
+end 
