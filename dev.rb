@@ -47,3 +47,7 @@ end
 dep "Viscosity.app" do
   source "http://www.thesparklabs.com/downloads/Viscosity1.3.1.dmg"
 end
+
+dep "GitHub.app" do
+  source "https://github-central.s3.amazonaws.com/mac/GitHub%20for%20Mac%201.0.zip"
+end
