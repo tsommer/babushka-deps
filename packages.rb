@@ -100,3 +100,9 @@ dep "xvfb.managed" do
     "/usr/bin/Xvfb".p.exist?
   }
 end
+
+dep "libyaml-dev.managed" do
+  met? {
+    "/usr/include/yaml.h".p.exist?
+  }
+end

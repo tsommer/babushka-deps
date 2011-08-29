@@ -14,7 +14,7 @@ end
 
 dep "jasperdocs" do
   requires "ubuntu-java"
-  
+
   requires "sphinx.src",
            "libmagick9-dev.managed",
            "redis-server",
@@ -23,13 +23,13 @@ end
 
 dep "wildiaries" do
   requires "ubuntu"
-  
+
   requires "libmagick9-dev.managed"
 end
 
 dep "cafeconcierge" do
   requires "ubuntu"
-  
+
   requires "libsasl2-dev.managed",
            "libmemcached-dev.managed",
            "sqlite"
@@ -40,4 +40,10 @@ dep "dma" do
 
   requires "firefox",
            "xvfb.managed"
+end
+
+dep "smash-reports" do
+  requires "ubuntu"
+
+  requires "libyaml-dev.managed"
 end
