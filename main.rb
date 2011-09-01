@@ -16,7 +16,8 @@ dep "main" do
            "AUSkey_Software.installer",
            "Acorn.app",
            "Perian.installer",
-           "GrandPerspective.app"
+           "GrandPerspective.app",
+           "The Unarchiver.app"
 
   # web
   requires "Google Chrome.app",
