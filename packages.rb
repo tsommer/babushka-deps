@@ -106,3 +106,9 @@ dep "libyaml-dev.managed" do
     "/usr/include/yaml.h".p.exist?
   }
 end
+
+dep "libpq-dev.managed" do
+  met? {
+    "/usr/include/postgresql/libpq-fe.h".p.exist?
+  }
+end

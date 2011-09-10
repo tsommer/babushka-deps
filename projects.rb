@@ -32,7 +32,8 @@ dep "cafeconcierge" do
 
   requires "libsasl2-dev.managed",
            "libmemcached-dev.managed",
-           "sqlite"
+           "sqlite",
+           "libpq-dev.managed"
 end
 
 dep "dma" do
