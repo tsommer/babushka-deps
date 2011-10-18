@@ -94,3 +94,7 @@ end
 dep "The Unarchiver.app" do
   source "http://theunarchiver.googlecode.com/files/TheUnarchiver2.7.1.zip"
 end
+
+dep "Evom.app" do
+  source "http://files.thelittleappfactory.com/evom/Evom.zip"
+end

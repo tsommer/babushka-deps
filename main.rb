@@ -17,7 +17,8 @@ dep "main" do
            "Acorn.app",
            "Perian.installer",
            "GrandPerspective.app",
-           "The Unarchiver.app"
+           "The Unarchiver.app",
+           "Evom.app"
 
   # web
   requires "Google Chrome.app",
