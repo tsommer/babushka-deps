@@ -7,12 +7,22 @@ dep "ubuntu" do
            "libreadline5-dev.managed",
            "libreadline6-dev.managed",
            "rvm"
+end
+
+dep "ubuntu-mysql" do
+  requires "ubuntu"
 
   requires "benhoskings:mysql.managed"
 end
 
-dep "ubuntu-java" do
+dep "ubuntu-postgres" do
   requires "ubuntu"
+
+  requires "benhoskings:postgres.managed"
+end
+
+dep "ubuntu-java" do
+  requires "ubuntu-mysql"
 
   requires "openjdk-6-jdk.managed"
 end

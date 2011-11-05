@@ -1,12 +1,12 @@
 dep "jasper" do
-  requires "ubuntu"
+  requires "ubuntu-mysql"
 
   requires "sphinx.src",
            "imagemagick.managed"
 end
 
 dep "radiopaedia" do
-  requires "ubuntu"
+  requires "ubuntu-mysql"
 
   requires "sphinx.src",
            "libfreeimage-dev.managed"
@@ -22,13 +22,13 @@ dep "jasperdocs" do
 end
 
 dep "wildiaries" do
-  requires "ubuntu"
+  requires "ubuntu-mysql"
 
   requires "libmagick9-dev.managed"
 end
 
 dep "cafeconcierge" do
-  requires "ubuntu"
+  requires "ubuntu-mysql"
 
   requires "libsasl2-dev.managed",
            "libmemcached-dev.managed",
@@ -44,7 +44,11 @@ dep "dma" do
 end
 
 dep "smash-reports" do
-  requires "ubuntu"
+  requires "ubuntu-mysql"
 
   requires "libyaml-dev.managed"
+end
+
+dep "shotsnanigans" do
+  requires "ubuntu-postgres"
 end
