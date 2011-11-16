@@ -11,3 +11,7 @@ dep "firefox", :template => "managed"
 dep "Skype.app" do
   source "http://www.skype.com/go/getskype-macosx.dmg"
 end
+
+dep "Raven.app" do
+  source "http://raven.ipodtutofast.com/Raven.zip"
+end

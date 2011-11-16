@@ -17,13 +17,13 @@ dep "main" do
            "Acorn.app",
            "Perian.installer",
            "GrandPerspective.app",
-           "The Unarchiver.app",
-           "Evom.app"
+           "The Unarchiver.app"
 
   # web
   requires "Google Chrome.app",
            "Firefox.app",
-           "Skype.app"
+           "Skype.app",
+           "Raven.app"
 
   # dev
   requires "rvm",
