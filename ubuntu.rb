@@ -6,8 +6,7 @@ dep "ubuntu" do
            "libopenssl-ruby.managed",
            "libcurl4-openssl-dev.managed",
            "libreadline5-dev.managed",
-           "libreadline6-dev.managed",
-           "rvm"
+           "libreadline6-dev.managed"
 end
 
 dep "ubuntu-mysql" do
