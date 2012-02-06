@@ -1,4 +1,3 @@
-dep "build-esential", :template => "managed"
 dep "wget", :template => "managed"
 
 dep "libxml2-dev.managed" do

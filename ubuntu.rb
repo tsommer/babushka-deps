@@ -1,9 +1,5 @@
-dep "ubuntu-essentials" do
-  requires "build-essential.managed"
-end
-
 dep "ubuntu" do
-  requires "ubuntu-essentials"
+  requires "build-essential"
   requires "libxml2-dev.managed",
            "libxslt-dev.managed",
            "libssl-dev.managed",
