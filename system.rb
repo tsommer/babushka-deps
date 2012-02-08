@@ -8,7 +8,7 @@ dep "oh-my-zsh" do
   }
 
   meet {
-    shell "wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh"
+    shell "curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh"
   }
 end
 
@@ -89,7 +89,7 @@ end
 
 dep "GrandPerspective.app" do
   source "http://downloads.sourceforge.net/project/grandperspectiv/grandperspective/1.3.3/GrandPerspective-1_3_3.dmg"
-end 
+end
 
 dep "The Unarchiver.app" do
   source "http://theunarchiver.googlecode.com/files/TheUnarchiver2.7.1.zip"

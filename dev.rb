@@ -4,7 +4,7 @@ dep "rvm" do
   }
 
   meet {
-    shell 'bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)'
+    shell 'bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)'
   }
 end
 
