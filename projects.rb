@@ -29,13 +29,6 @@ dep "wildiaries" do
 end
 
 dep "cafeconcierge" do
-  requires "ubuntu-mysql"
-
-  requires "libsasl2-dev.managed",
-           "libmemcached-dev.managed"
-end
-
-dep "cafeconcierge" do
   requires "ubuntu-postgres"
 
   requires "libsasl2-dev",
