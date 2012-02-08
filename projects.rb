@@ -31,9 +31,9 @@ end
 dep "cafeconcierge" do
   requires "ubuntu-postgres"
 
-  requires "libsasl2-dev",
-           "libmemcached-dev",
-           "libpq-dev"
+  requires "libsasl2-dev.managed",
+           "libmemcached-dev.managed",
+           "libpq-dev.managed"
 end
 
 dep "dma" do
