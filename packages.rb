@@ -1,4 +1,5 @@
 dep "wget", :template => "managed"
+dep "ack", :template => "managed"
 
 dep "libxml2-dev.managed" do
   met? {

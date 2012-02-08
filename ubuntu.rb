@@ -1,5 +1,10 @@
+dep "ubuntu-core" do
+  requires "benhoskings:system",
+           "build-essential",
+           "ack.managed"
+end
+
 dep "ubuntu" do
-  requires "build-essential"
   requires "libxml2-dev.managed",
            "libxslt-dev.managed",
            "libssl-dev.managed",
