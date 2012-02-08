@@ -1,6 +1,18 @@
 dep "wget", :template => "managed"
 dep "ack", :template => "managed"
 
+dep "redis-server", :template => "managed"
+dep "sqlite3", :template => "managed"
+
+dep "libsqlite3-dev", :template => "managed"
+dep "libpq-dev", :template => "managed"
+dep "libsasl2-dev", :template => "managed"
+dep "libmemcached-dev", :template => "managed"
+
+dep "sqlite" do
+  requires "sqlite3", "libsqlite3-dev.managed"
+end
+
 dep "libxml2-dev.managed" do
   met? {
     "/usr/include/libxml2".p.exist?
@@ -68,34 +80,6 @@ dep "libmagick9-dev.managed" do
   }
 end
 
-dep "libsasl2-dev.managed" do
-  met? {
-    "/usr/lib/libsasl2.a".p.exist?
-  }
-end
-
-dep "libmemcached-dev.managed" do
-  met? {
-    "/usr/lib/libmemcached.so.2".p.exist?
-  }
-end
-
-dep "ack", :template => "managed"
-
-dep "libsqlite3-dev.managed" do
-  met? {
-    "/usr/include/sqlite3.h".p.exist?
-  }
-end
-
-dep "sqlite3", :template => "managed"
-
-dep "sqlite" do
-  requires "sqlite3", "libsqlite3-dev.managed"
-end
-
-dep "redis-server", :template => "managed"
-
 dep "xvfb.managed" do
   met? {
     "/usr/bin/Xvfb".p.exist?
@@ -105,11 +89,5 @@ end
 dep "libyaml-dev.managed" do
   met? {
     "/usr/include/yaml.h".p.exist?
-  }
-end
-
-dep "libpq-dev.managed" do
-  met? {
-    "/usr/include/postgresql/libpq-fe.h".p.exist?
   }
 end
