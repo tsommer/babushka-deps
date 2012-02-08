@@ -32,9 +32,17 @@ dep "cafeconcierge" do
   requires "ubuntu-mysql"
 
   requires "libsasl2-dev.managed",
+           "libmemcached-dev.managed"
+end
+
+dep "cafeconcierge dev" do
+  requires "ubuntu-mysql"
+
+  requires "libsasl2-dev.managed",
            "libmemcached-dev.managed",
            "sqlite",
            "libpq-dev.managed"
+  
 end
 
 dep "dma" do
@@ -53,3 +61,8 @@ end
 dep "shotsnanigans" do
   requires "ubuntu-postgres"
 end
+
+dep "yourview" do
+  requires "ubuntu-postgres"
+end
+
