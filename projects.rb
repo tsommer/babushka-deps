@@ -55,5 +55,8 @@ end
 
 dep "yourview" do
   requires "ubuntu-postgres"
+
+  requires "libsasl2-dev.managed",
+           "libpq-dev.managed"
 end
 
