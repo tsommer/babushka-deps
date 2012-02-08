@@ -23,7 +23,8 @@ end
 dep "ubuntu-postgres" do
   requires "ubuntu"
 
-  requires "benhoskings:postgres.managed"
+  requires "benhoskings:postgres.managed",
+           "postgres-setup-db"
 end
 
 dep "ubuntu-java" do
