@@ -1,13 +1,3 @@
-dep "rvm" do
-  met? {
-    "~/.rvm/scripts/rvm".p.file?
-  }
-
-  meet {
-    shell 'bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)'
-  }
-end
-
 dep "TextMate.app" do
   source "http://download.macromates.com/TextMate_1.5.10.zip"
 end
