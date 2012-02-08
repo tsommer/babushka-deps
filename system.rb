@@ -3,6 +3,8 @@ dep "iTerm.app" do
 end
 
 dep "oh-my-zsh" do
+  requires "benhoskings:zsh"
+
   met? {
     "~/.zshrc".p.exist?
   }
