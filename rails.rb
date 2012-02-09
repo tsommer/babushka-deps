@@ -3,8 +3,10 @@ dep "regenerate-assets", :root, :env do
 
   meet {
     cd(root) {
-      shell "RAILS_ENV=#{env} bundle exec rake assets:clear_cache"
-      shell "RAILS_ENV=#{env} bundle exec rake assets:precompile"
+      shell "bundle exec rake assets:clear_cache RAILS_ENV=#{env}"
+      shell "bundle exec rake assets:precompile RAILS_ENV=#{env}"
     }
+
+    @run = true
   }
 end
