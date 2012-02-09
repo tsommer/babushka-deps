@@ -21,8 +21,8 @@ dep "up to date.repo", :git_ref_data, :env do
   env.default!(ENV['RAILS_ENV'] || ENV['RACK_ENV'] || 'production')
   requires [
     'benhoskings:on correct branch.repo'.with(ref_info[:branch]),
-    'benhoskings:HEAD up to date.repo'.with(ref_info)
-    # 'app bundled'.with(:root => '.', :env => env),
+    'benhoskings:HEAD up to date.repo'.with(ref_info),
+    'benhoskings:app bundled'.with(:root => '.', :env => env)
 
     # This and 'after deploy' below are separated so the deps in 'current dir'
     # they refer to load from the new code checked out by 'HEAD up to date.repo'.
@@ -36,3 +36,4 @@ dep "up to date.repo", :git_ref_data, :env do
   ]
 
 end
+
