@@ -19,9 +19,4 @@ dep "replace-post-receive-hook", :path do
 end
 
 dep "clone-secrets-repo", :secrets_repo do
-  met? { false }
-
-  meet {
-    shell "git clone #{secrets_repo} ~/secrets"
-  }
 end
