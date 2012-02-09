@@ -4,7 +4,7 @@ dep "web repo with secrets", :path do
            "clone-secrets-repo"
 end
 
-dep "replace-post-receive-hook", :pathdo
+dep "replace-post-receive-hook", :path do
   met? {
     (path / ".git/hooks/post-receive").executable? &&
     Babushka::Renderable.new(path / ".git/hooks/post-receive").from?(dependency.load_path.parent / "git/deploy-repo-post-receive")
