@@ -36,6 +36,11 @@ dep "cafeconcierge" do
            "libpq-dev.managed"
 end
 
+dep "cafeconcierge-production" do
+  requires "cafeconcierge",
+           "postfix"
+end
+
 dep "dma" do
   requires "ubuntu-java"
 
