@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Load rvm in order to use correct ruby
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+
 cd .. # up from .git/
 unset GIT_DIR # otherwise `git` commands can't see other repos
 babushka --colour 'tsommer:up to date.repo' git_ref_data="$(cat /dev/stdin)"
