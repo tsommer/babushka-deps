@@ -1,7 +1,9 @@
 dep "ubuntu-core" do
   requires "benhoskings:system",
            "build-essential",
-           "ack"
+           "ack",
+           "zip",
+           "unzip"
 end
 
 dep "ubuntu" do

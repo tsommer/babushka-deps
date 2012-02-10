@@ -2,6 +2,8 @@
 dep "wget", :template => "managed"
 dep "ack", :template => "managed"
 dep "postfix", :template => "managed"
+dep "zip", :template => "managed"
+dep "unzip", :template => "managed"
 
 dep "redis-server", :template => "managed"
 dep "sqlite3", :template => "managed"
