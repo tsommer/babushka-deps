@@ -20,7 +20,7 @@ dep "restart-delayed-job", :root, :env do
   met? {
     cd(root) {
       pid = "tmp/pids/delayed_job.pid".p.read
-      !pid.blank? && pid != @old_pid
+      @old_pid && !pid.blank? && pid != @old_pid
     }
   }
 
