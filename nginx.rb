@@ -12,6 +12,10 @@ meta :nginx do
     path / 'tmp/sockets/unicorn.socket'
   end
 
+  def nginx_running?
+    shell? "netstat -an | grep -E '^tcp.*[.:]80 +.*LISTEN'"
+  end
+
   def restart_nginx
     if nginx_running?
       log_shell "Restarting nginx", "#{nginx_bin} -s reload", :sudo => true
