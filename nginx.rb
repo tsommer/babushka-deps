@@ -25,8 +25,8 @@ dep "setup-ssl-vhost", :domain, :path, :listen_host, :listen_port, :nginx_prefix
   listen_port.default!('80')
   path.default("~#{domain}/current".p) if shell?('id', domain)
 
-  requires 'configured.nginx'.with(nginx_prefix)
-  requires 'unicorn configured'.with(path)
+  requires 'benhoskings:configured.nginx'.with(nginx_prefix)
+  requires 'benhoskings:unicorn configured'.with(path)
 
   met? { @run }
 
