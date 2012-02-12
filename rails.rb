@@ -15,3 +15,20 @@ dep "regenerate-assets", :root, :env do
     @run = true
   }
 end
+
+dep "restart-delayed-job", :root, :env do
+  met? {
+    cd(root) {
+      pid = "tmp/pids/delayed_job.pid".p.read
+      !pid.blank? && pid != @old_pid
+    }
+  }
+
+  meet {
+    cd(root) {
+      @old_pid = "tmp/pids/delayed_job.pid".p.read
+      shell "RAILS_ENV=#{env} bundle exec script/delayed_job restart"
+    }
+  }
+end
+
