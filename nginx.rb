@@ -1,5 +1,4 @@
 meta :nginx do
-  def nginx_bin;    nginx_prefix / "sbin/nginx" end
   def vhost_conf;   nginx_prefix / "conf/vhosts/#{domain}.conf" end
   def vhost_common; nginx_prefix / "conf/vhosts/#{domain}.common" end
   def vhost_link;   nginx_prefix / "conf/vhosts/on/#{domain}.conf" end
@@ -13,7 +12,7 @@ meta :nginx do
   end
 end
 
-dep "setup-ssl-vhost", :type, :domain, :path, :listen_host, :listen_port, :nginx_prefix, :enable_ssl, :force_ssl do
+dep "setup-ssl-vhost", :domain, :path, :listen_host, :listen_port, :nginx_prefix, :enable_ssl, :force_ssl do
   listen_host.default!('[::]')
   listen_port.default!('80')
   path.default("~#{domain}/current".p) if shell?('id', domain)
