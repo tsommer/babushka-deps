@@ -18,6 +18,7 @@ server {
   charset utf-8;
 
   server_name <%= domain %> www.<%= domain %>;
+  root <%= path / 'public' %>;
 
   if ($host !~ ^cafeconcierge\.com$) {
     rewrite ^(.*)$ https://cafeconcierge.com$1 permanent;
@@ -27,6 +28,20 @@ server {
   ssl_certificate      certs/<%= domain %>.crt;
   ssl_certificate_key  certs/<%= domain %>.key;
   ssl_session_timeout  5m;
+
+  location @app {
+    proxy_pass           http://<%= upstream_name %>;
+    proxy_redirect       off;
+
+    proxy_buffer_size    64k;
+    proxy_buffers        32 16k;
+    client_max_body_size 128m;
+
+    proxy_set_header     Host              $host;
+    proxy_set_header     X-Real-IP         $remote_addr;
+    proxy_set_header     X-Forwarded-For   $proxy_add_x_forwarded_for;
+    proxy_set_header     X-Forwarded-Proto $scheme;
+  }
 
   include vhosts/<%= domain %>.common;
 }
