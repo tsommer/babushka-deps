@@ -89,7 +89,7 @@ end
 
 dep "libmemcached-dev.managed" do
   met? {
-    "/usr/lib/libmemcached.so.2".p.exist?
+    "/usr/lib/libmemcached.so".p.exist?
   }
 end
 
