@@ -1,4 +1,5 @@
 meta :nginx do
+  def nginx_bin;    nginx_prefix / "sbin/nginx" end
   def vhost_conf;   nginx_prefix / "conf/vhosts/#{domain}.conf" end
   def vhost_common; nginx_prefix / "conf/vhosts/#{domain}.common" end
   def vhost_link;   nginx_prefix / "conf/vhosts/on/#{domain}.conf" end
@@ -9,6 +10,13 @@ meta :nginx do
 
   def unicorn_socket
     path / 'tmp/sockets/unicorn.socket'
+  end
+
+  def restart_nginx
+    if nginx_running?
+      log_shell "Restarting nginx", "#{nginx_bin} -s reload", :sudo => true
+      sleep 1 # The reload just sends the signal, and doesn't wait.
+    end
   end
 end
 
@@ -28,4 +36,9 @@ dep "setup-ssl-vhost", :domain, :path, :listen_host, :listen_port, :nginx_prefix
 
     @run = true
   }
+
+  after {
+    restart_nginx
+  }
 end
+
