@@ -28,8 +28,8 @@ dep "restart-delayed-job", :root, :env do
     cd(root) {
       @old_pid = "tmp/pids/delayed_job.pid".p.read
 
-      shell "export RAILS_ENV=production"
-      log_shell "Restarting delayed job", "bundle exec script/delayed_job restart"
+      log_shell "Restarting delayed job",
+        "/usr/bin/env RAILSE_ENV=production bundle exec script/delayed_job restart"
     }
   }
 end
