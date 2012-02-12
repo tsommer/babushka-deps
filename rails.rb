@@ -1,5 +1,5 @@
 dep "setup-rails-app", :domain, :domain_aliases, :username, :path, :listen_host, :listen_port, :env, :nginx_prefix, :enable_ssl, :force_ssl, :data_required do
-  requires "benhoskings:rails app".with(:domain, :domain_aliases, :username, :path, :listen_host, :listen_port, :env, :nginx_prefix, :enable_ssl, :force_sll, :data_required),
+  requires "benhoskings:rails app",
            "setup-ssl-vhost".with(:domain, :path, :listen_host, :listen_port, :nginx_prefix, :enable_ssl, :force_ssl)
 end
 
