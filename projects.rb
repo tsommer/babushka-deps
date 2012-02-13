@@ -38,7 +38,8 @@ end
 
 dep "cafeconcierge-production" do
   requires "cafeconcierge",
-           "postfix"
+           "postfix",
+           "postgres-setup-db"
 end
 
 dep "dma" do
