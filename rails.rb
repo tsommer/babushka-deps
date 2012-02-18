@@ -34,3 +34,13 @@ dep "restart-delayed-job", :root, :env do
   }
 end
 
+dep "update-crontab", :root, :env do
+  met? { @run }
+
+  meet {
+    cd(root) {
+      shell "bundle exec whenever -w -s 'environment=#{env}'"
+    }
+  }
+end
+

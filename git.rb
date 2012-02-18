@@ -34,6 +34,7 @@ dep 'up to date.repo', :git_ref_data, :env do
     'update-configs'.with(:root => "."),
     'benhoskings:app bundled'.with(:root => '.', :env => env),
     'regenerate-assets'.with(:root => '.', :env => env),
+    'update-crontab'.with(:root => '.', :env => env),
 
     # This and 'after deploy' below are separated so the deps in 'current dir'
     # they refer to load from the new code checked out by 'HEAD up to date.repo'.
