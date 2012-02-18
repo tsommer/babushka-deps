@@ -40,6 +40,8 @@ dep "update-crontab", :root, :env do
   meet {
     cd(root) {
       shell "bundle exec whenever -w -s 'environment=#{env}'"
+
+      @run = true
     }
   }
 end
