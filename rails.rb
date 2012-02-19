@@ -3,6 +3,18 @@ dep "setup-rails-app", :domain, :domain_aliases, :username, :path, :listen_host,
            "setup-ssl-vhost.nginx".with(domain, path, listen_host, listen_port, nginx_prefix)
 end
 
+dep "migrate-db", :root, :env do
+  met? { @run }
+
+  meet {
+    cd(root) {
+      shell "bundle exec rake db:migrate RAILS_ENV=#{env}"
+
+      @run = true
+    }
+  }
+end
+
 dep "regenerate-assets", :root, :env do
   met? { @run }
 

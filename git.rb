@@ -33,6 +33,7 @@ dep 'up to date.repo', :git_ref_data, :env do
     'benhoskings:HEAD up to date.repo'.with(ref_info),
     'update-configs'.with(:root => "."),
     'benhoskings:app bundled'.with(:root => '.', :env => env),
+    'migrate-db'.with(:root => '.', :env => env),
     'regenerate-assets'.with(:root => '.', :env => env),
     'update-crontab'.with(:root => '.', :env => env),
 
