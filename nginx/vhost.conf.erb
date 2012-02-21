@@ -20,8 +20,8 @@ server {
   server_name <%= domain %> www.<%= domain %>;
   root <%= path / 'public' %>;
 
-  if ($host !~ ^cafeconcierge\.com$) {
-    rewrite ^(.*)$ https://cafeconcierge.com$1 permanent;
+  if ($host !~ ^<%= domain.to_s.gsub('.', '\.') %>$) {
+    rewrite ^(.*)$ https://<%= domain %>$1 permanent;
   }
 
   ssl                  on;
