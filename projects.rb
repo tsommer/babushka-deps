@@ -2,7 +2,9 @@ dep "jasper" do
   requires "ubuntu-mysql"
 
   requires "sphinx.src",
-           "imagemagick.managed"
+           "imagemagick.managed",
+           "firefox",
+           "xvfb.managed"
 end
 
 dep "radiopaedia" do
