@@ -9,7 +9,7 @@ server {
   listen <%= listen_host %>:<%= listen_port %>;
   charset utf-8;
 
-  server_name <%= domain %> www.<%= domain %>;
+  server_name <%= domain %> www.<%= domain %> <%= aliases %>;
   rewrite ^(.*)$ https://<%= domain %>$1 permanent;
 }
 

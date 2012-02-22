@@ -24,7 +24,7 @@ meta :nginx do
   end
 end
 
-dep "setup-ssl-vhost.nginx", :domain, :path, :listen_host, :listen_port, :nginx_prefix do
+dep "setup-ssl-vhost.nginx", :domain, :path, :listen_host, :listen_port, :nginx_prefix, :aliases do
   listen_host.default!('[::]')
   listen_port.default!('80')
   path.default("~#{domain}/current".p) if shell?('id', domain)
