@@ -1,4 +1,4 @@
-dep "setup-babushka" do
+dep "setup-bluepill" do
   requires "bluepill-gem",
            "bluepill-run-dir",
            "bluepill.logrotate"
