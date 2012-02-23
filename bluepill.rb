@@ -6,7 +6,7 @@ end
 
 dep "bluepill-gem" do
   met? {
-    grep sudo("gem list"), "bluepill"
+    sudo("gem list") =~ "bluepill"
   }
 
   meet {
