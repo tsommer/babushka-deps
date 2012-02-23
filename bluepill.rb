@@ -10,7 +10,7 @@ dep "bluepill-gem" do
   }
 
   meet {
-    sudo "gem install bluepill"
+    sudo "gem install bluepill --no-rdoc --no-ri"
   }
 end
 
