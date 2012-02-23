@@ -38,7 +38,8 @@ dep "cafeconcierge" do
 end
 
 dep "cafeconcierge-production" do
-  requires "cafeconcierge"
+  requires "cafeconcierge",
+           "benhoskings:mysql access"
 end
 
 dep "dma" do
