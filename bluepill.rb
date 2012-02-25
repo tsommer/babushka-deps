@@ -16,7 +16,7 @@ end
 
 dep "bluepill-run-dir" do
   met? {
-    File.exists? "var/run/bluepill"
+    File.exists? "/var/run/bluepill"
   }
 
   meet {
