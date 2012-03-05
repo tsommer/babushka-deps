@@ -22,18 +22,16 @@ dep "main" do
   # web
   requires "Google Chrome.app",
            "Firefox.app",
-           "Skype.app",
-           "Raven.app"
+           "Opera.app",
+           "Skype.app"
 
   # dev
   requires "rvm",
            "TextMate.app",
-           "Sublime Text 2.app",
-           "Sequel Pro.app",
            "GitX.app",
            "HTTP Client.app",
            "VirtualBox.installer",
            "CoRD.app",
-           "Vico.app",
-           "GitHub.app"
+           "Vico.app"
 end
+
