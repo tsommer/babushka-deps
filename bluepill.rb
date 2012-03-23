@@ -1,15 +1,10 @@
 meta :bluepill do
   accepts_value_for :renders
   accepts_value_for :as
+
   template {
-    requires 'setup-bluepill'
-    def conf_dest
-      "#{path}/#{username}/pills".detect {|path|
-        path.p.exists?
-      } / as
-    end
     met? {
-      Babushka::Renderable.new(conf_dest).from?(dependency.load_path.parent / renders)
+      Babushka::Renderable.new("#{root}/pills" / as).from?(dependency.load_path.parent / renders)
     }
     meet {
       render_erb renders, :to => conf_dest
@@ -18,6 +13,9 @@ meta :bluepill do
 end
 
 dep "setup-bluepill", :path, :username do
+  username.default(shell('whoami'))
+  path.default('~')
+
   requires "bluepill-gem",
            "bluepill-run-dir",
            "bluepill.logrotate",
@@ -44,18 +42,23 @@ dep "bluepill-run-dir" do
   }
 end
 
-dep "setup-pill-dir", :path, :username do
+dep "setup-pill-dir", :path do
   met? {
-    File.exists? "#{path}/#{username}/pills"
+    File.exists? File.expand_path("#{path}/pills")
   }
 
   meet {
-    shell "mkdir -p #{path}/#{username}/pills"
+    shell "mkdir -p #{path}/pills"
   }
 end
 
-dep "delayed_job.bluepill" do
-  renders "bluepill/pill.conf"
+dep "delayed_job.bluepill", :username, :root, :env do
+  renders "bluepill/delayed_job.conf"
   as "delayed_job.pill"
+end
+
+dep "unicorn.bluepill", :username, :root, :env do
+  renders "bluepill/unicorn.conf"
+  as "unicorn.pill"
 end
 

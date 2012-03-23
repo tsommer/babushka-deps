@@ -59,3 +59,12 @@ dep "update-crontab", :root, :env do
   }
 end
 
+dep "stop-bluepill" do
+
+end
+
+dep "start-bluepill", :username, :root, :env do
+  requires "delayed_job".with(:username, :root, :env),
+           "unicorn".with(:username, :root, :env)
+end
+
