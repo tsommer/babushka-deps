@@ -64,7 +64,9 @@ dep "stop-bluepill" do
 end
 
 dep "start-bluepill", :username, :root, :env do
-  requires "delayed_job.bluepill".with(:username, :root, :env),
-           "unicorn.bluepill".with(:username, :root, :env)
+  username.default! shell('whoami'))
+
+  requires "delayed_job.bluepill".with(username, root, env),
+           "unicorn.bluepill".with(username, root, env)
 end
 
