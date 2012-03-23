@@ -53,7 +53,7 @@ dep "stop-bluepill.task" do
   }
 end
 
-dep "start-bluepill.task", :username, :env do
+dep "start-bluepill.task", :username, :root, :env do
   requires "delayed_job.bluepill".with(username, env),
            "unicorn.bluepill".with(username, env)
 
