@@ -1,6 +1,7 @@
 dep "setup-rails-app", :domain, :domain_aliases, :username, :path, :listen_host, :listen_port, :proxy_host, :proxy_port, :env, :nginx_prefix, :enable_http, :enable_https, :force_https, :data_required do
   requires "benhoskings:rails app".with(domain, domain_aliases, username, path, listen_host, listen_port, proxy_host, proxy_port, env, nginx_prefix, enable_http, enable_https, force_https, data_required),
-           "setup-ssl-vhost.nginx".with(domain, path, listen_host, listen_port, nginx_prefix)
+           "setup-ssl-vhost.nginx".with(domain, path, listen_host, listen_port, nginx_prefix),
+           "rails-app.logrotate".with(username)
 end
 
 dep "migrate-db", :root, :env do
