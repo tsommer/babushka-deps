@@ -4,22 +4,19 @@ meta :bluepill do
 
   template {
     met? {
-      Babushka::Renderable.new("#{root}/pills" / as).from?(dependency.load_path.parent / renders)
+      Babushka::Renderable.new(root / "pills" / as).from?(dependency.load_path.parent / renders)
     }
     meet {
-      render_erb renders, :to => conf_dest
+      render_erb renders, :to => (root / "pills" / as)
     }
   }
 end
 
-dep "setup-bluepill", :path, :username do
-  username.default(shell('whoami'))
-  path.default('~')
-
+dep "setup-bluepill", :root do
   requires "bluepill-gem",
            "bluepill-run-dir",
            "bluepill.logrotate",
-           "setup-pill-dir".with(path, username)
+           "setup-pill-dir".with(root)
 end
 
 dep "bluepill-gem" do
@@ -42,13 +39,16 @@ dep "bluepill-run-dir" do
   }
 end
 
-dep "setup-pill-dir", :path do
+dep "setup-pill-dir", :root do
+  username.default(shell('whoami'))
+  root.default('~')
+
   met? {
-    File.exists? File.expand_path("#{path}/pills")
+    File.exists? File.expand_path("#{root}/pills")
   }
 
   meet {
-    shell "mkdir -p #{path}/pills"
+    shell "mkdir -p #{root}/pills"
   }
 end
 
