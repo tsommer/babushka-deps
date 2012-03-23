@@ -54,15 +54,13 @@ dep "stop-bluepill.task", :username do
   }
 end
 
-dep "start-bluepill.task", :username, :root, :env do
+dep "start-bluepill.task", :username, :env do
   requires "delayed_job.bluepill".with(username, env),
            "unicorn.bluepill".with(username, env)
 
   run {
-    cd(root) {
-      shell "bluepill load ~/pills/delayed_job.pill --no-privileged"
-      shell "bluepill load ~/pills/unicorn.pill --no-privileged"
-    }
+    shell "bluepill load ~/pills/delayed_job.pill --no-privileged"
+    shell "bluepill load ~/pills/unicorn.pill --no-privileged"
   }
 end
 
