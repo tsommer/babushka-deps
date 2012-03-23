@@ -36,6 +36,7 @@ dep "bluepill-run-dir" do
 
   meet {
     sudo "mkdir -p /var/run/bluepill"
+    sudo "chmod 777 /var/run/bluepill"
   }
 end
 

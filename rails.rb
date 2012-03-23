@@ -4,28 +4,20 @@ dep "setup-rails-app", :domain, :domain_aliases, :username, :path, :listen_host,
            "rails-app.logrotate".with(username)
 end
 
-dep "migrate-db", :root, :env do
-  met? { @run }
-
-  meet {
+dep "migrate-db.task", :root, :env do
+  run {
     cd(root) {
       shell "bundle exec rake db:migrate RAILS_ENV=#{env}"
-
-      @run = true
     }
   }
 end
 
-dep "regenerate-assets", :root, :env do
-  met? { @run }
-
-  meet {
+dep "regenerate-assets.task", :root, :env do
+  run {
     cd(root) {
       shell "bundle exec rake assets:clear_cache RAILS_ENV=#{env}"
       shell "bundle exec rake assets:precompile RAILS_ENV=#{env}"
     }
-
-    @run = true
   }
 end
 
@@ -47,26 +39,29 @@ dep "restart-delayed-job", :root, :env do
   }
 end
 
-dep "update-crontab", :root, :env do
-  met? { @run }
-
-  meet {
+dep "update-crontab.task", :root, :env do
+  run {
     cd(root) {
       shell "bundle exec whenever -w -s 'environment=#{env}'"
-
-      @run = true
     }
   }
 end
 
-dep "stop-bluepill" do
-
+dep "stop-bluepill.task" do
+  run {
+    shell "bluepill quit --no-privileged"
+  }
 end
 
-dep "start-bluepill", :username, :root, :env do
-  username.default! shell('whoami'))
-
+dep "start-bluepill.task", :username, :root, :env do
   requires "delayed_job.bluepill".with(username, root, env),
            "unicorn.bluepill".with(username, root, env)
+
+  run {
+    cd(root) {
+      shell "bluepill load ../pills/delayed_job.pill"
+      shell "bluepill load ../pills/unicorn.pill"
+    }
+  }
 end
 
