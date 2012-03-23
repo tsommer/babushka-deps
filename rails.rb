@@ -59,8 +59,8 @@ dep "start-bluepill.task", :username, :root, :env do
 
   run {
     cd(root) {
-      shell "bluepill load ../pills/delayed_job.pill"
-      shell "bluepill load ../pills/unicorn.pill"
+      shell "bluepill load ../pills/delayed_job.pill --no-privileged"
+      shell "bluepill load ../pills/unicorn.pill --no-privileged"
     }
   }
 end
