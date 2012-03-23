@@ -22,6 +22,7 @@ end
 
 dep 'bluepill.logrotate' do
   renders "logrotate/bluepill.conf"
+  as "bluepill"
 end
 
 dep 'rails-app.logrotate', :username do
