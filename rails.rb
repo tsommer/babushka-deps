@@ -47,9 +47,10 @@ dep "update-crontab.task", :root, :env do
   }
 end
 
-dep "stop-bluepill.task" do
+dep "stop-bluepill.task", :username do
   run {
-    shell "bluepill quit --no-privileged"
+    shell "bluepill #{username}-delayed_job quit --no-privileged"
+    shell "bluepill #{username}-unicorn quit --no-privileged"
   }
 end
 

@@ -43,7 +43,7 @@ dep 'up to date.repo', :git_ref_data, :env do
     # checks trigger a source load when called.
     'benhoskings:on deploy'.with(ref_info[:old_id], ref_info[:new_id], ref_info[:branch], env),
 
-    'stop-bluepill.task',
+    'stop-bluepill.task'.with(:username => shell('whoami')),
     'benhoskings:app flagged for restart.task',
     'benhoskings:maintenance page down',
     'restart-delayed-job'.with(:root => ".", :env => env),
