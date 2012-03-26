@@ -2,7 +2,9 @@ dep "setup-rails-app", :domain, :domain_aliases, :username, :path, :listen_host,
   requires "benhoskings:rails app".with(domain, domain_aliases, username, path, listen_host, listen_port, proxy_host, proxy_port, env, nginx_prefix, enable_http, enable_https, force_https, data_required),
            "setup-ssl-vhost.nginx".with(domain, path, listen_host, listen_port, nginx_prefix),
            "rails-app.logrotate".with(username),
-           "setup-bluepill".with(username)
+           "setup-bluepill".with(username),
+           "delayed_job.bluepill".with(username, env),
+           "unicorn.bluepill".with(username, env)
 end
 
 dep "migrate-db.task", :root, :env do
