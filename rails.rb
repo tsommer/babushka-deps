@@ -50,18 +50,17 @@ end
 
 dep "stop-bluepill.task", :username do
   run {
-    shell "bluepill #{username}-delayed_job quit --no-privileged"
-    shell "bluepill #{username}-unicorn quit --no-privileged"
+    Dir["~/pills/*.pill"].each do |path|
+      shell "bluepill #{username}-#{File.basename(path, ".pill")} quit --no-privileged"
+    end
   }
 end
 
-dep "start-bluepill.task", :username, :env do
-  requires "delayed_job.bluepill".with(username, env),
-           "unicorn.bluepill".with(username, env)
-
+dep "start-bluepill.task" do
   run {
-    shell "bluepill load ~/pills/delayed_job.pill --no-privileged"
-    shell "bluepill load ~/pills/unicorn.pill --no-privileged"
+    Dir["~/pills/*.pill"].each do |path|
+      shell "bluepill load #{path} --no-privileged"
+    end
   }
 end
 
