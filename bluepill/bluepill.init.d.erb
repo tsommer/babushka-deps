@@ -19,14 +19,17 @@ test -x $BABUSHKA_BIN || { echo "$BABUSHKA_BIN not installed";
         if [ "$1" = "stop" ]; then exit 0;
         else exit 5; fi; }
 
+RVM_SETUP='source "$HOME/.rvm/scripts/rvm"'
+APP_USER='su - <%= username %> -c'
+
 case "$1" in
   start)
     echo -n "Starting bluepill "
-    sudo -u <%= username %> $BABUSHKA_BIN 'tsommer:start-bluepill.task' --update
+    $APP_USER "$RVM_SETUP && babushka tsommer:start-bluepill.task --update"
     ;;
   stop)
     echo -n "Shutting down bluepill "
-    sudo -u <%= username %> $BABUSHKA_BIN 'tsommer:stop-bluepill.task' --update
+    $APP_USER "$RVM_SETUP && babushka tsommer:stop-bluepill.task --update"
     ;;
   restart)
     ## Stop the service and regardless of whether it was
