@@ -12,12 +12,12 @@ meta :bluepill do
   }
 end
 
-dep "setup-bluepill" do
+dep "setup-bluepill", :username do
   requires "bluepill-gem",
            "bluepill-run-dir",
            "bluepill.logrotate",
            "setup-pill-dir",
-           "bluepill-startup-script"
+           "bluepill-startup-script".with(username)
 end
 
 dep "bluepill-gem" do
@@ -48,9 +48,9 @@ dep "setup-pill-dir" do
   }
 end
 
-dep "bluepill-startup-script" do
+dep "bluepill-startup-script", :username do
   on :linux do
-    requires 'rcconf.managed'
+    requires 'benhoskings:rcconf.managed'
 
     met? {
       shell("rcconf --list").val_for('bluepill') == 'on'
