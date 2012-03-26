@@ -50,7 +50,7 @@ end
 
 dep "stop-bluepill.task", :username do
   run {
-    Dir["~/pills/*.pill"].each do |path|
+    Dir[File.join(File.expand_path("~/pills"), "*.pill")].each do |path|
       shell "bluepill #{username}-#{File.basename(path, ".pill")} quit --no-privileged"
     end
   }
@@ -58,7 +58,7 @@ end
 
 dep "start-bluepill.task" do
   run {
-    Dir["~/pills/*.pill"].each do |path|
+    Dir[File.join(File.expand_path("~/pills"), "*.pill")].each do |path|
       shell "bluepill load #{path} --no-privileged"
     end
   }
