@@ -49,6 +49,8 @@ dep "update-crontab.task", :root, :env do
 end
 
 dep "stop-bluepill.task", :username do
+  username.default!(shell('whoami'))
+
   run {
     Dir[File.join(File.expand_path("~/pills"), "*.pill")].each do |path|
       shell "bluepill #{username}-#{File.basename(path, ".pill")} quit --no-privileged"

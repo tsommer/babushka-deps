@@ -16,7 +16,8 @@ dep "setup-bluepill" do
   requires "bluepill-gem",
            "bluepill-run-dir",
            "bluepill.logrotate",
-           "setup-pill-dir"
+           "setup-pill-dir",
+           "bluepill-startup-script"
 end
 
 dep "bluepill-gem" do
@@ -45,6 +46,20 @@ dep "setup-pill-dir" do
   meet {
     shell "mkdir -p ~/pills"
   }
+end
+
+dep "bluepill-startup-script" do
+  on :linux do
+    requires 'rcconf.managed'
+
+    met? {
+      shell("rcconf --list").val_for('bluepill') == 'on'
+    }
+    meet {
+      render_erb 'bluepill/bluepill.init.d.erb', :to => '/etc/init.d/bluepill', :perms => '755', :sudo => true
+      sudo 'update-rc.d bluepill defaults'
+    }
+  end
 end
 
 dep "delayed_job.bluepill", :username, :env do
