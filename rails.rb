@@ -2,7 +2,7 @@ dep "setup-rails-app", :domain, :domain_aliases, :username, :path, :listen_host,
   requires "benhoskings:rails app".with(domain, domain_aliases, username, path, listen_host, listen_port, proxy_host, proxy_port, env, nginx_prefix, enable_http, enable_https, force_https, data_required),
            "setup-ssl-vhost.nginx".with(domain, path, listen_host, listen_port, nginx_prefix),
            "rails-app.logrotate".with(username),
-           "setup-bluepill"
+           "setup-bluepill".with(username)
 end
 
 dep "migrate-db.task", :root, :env do
@@ -52,15 +52,17 @@ dep "stop-bluepill.task", :username do
   username.default!(shell('whoami'))
 
   run {
-    Dir[File.join(File.expand_path("~/pills"), "*.pill")].each do |path|
+    Dir[File.join(File.expand_path("~#{username}pills"), "*.pill")].each do |path|
       shell "bluepill #{username}-#{File.basename(path, ".pill")} quit --no-privileged"
     end
   }
 end
 
-dep "start-bluepill.task" do
+dep "start-bluepill.task", :username do
+  username.default!(shell('whoami'))
+
   run {
-    Dir[File.join(File.expand_path("~/pills"), "*.pill")].each do |path|
+    Dir[File.join(File.expand_path("~#{username}/pills"), "*.pill")].each do |path|
       shell "bluepill load #{path} --no-privileged"
     end
   }
