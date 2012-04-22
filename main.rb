@@ -1,5 +1,7 @@
 dep "main" do
 
+  # load osx settings
+
   # packages
   requires "wget",
            "ack"
