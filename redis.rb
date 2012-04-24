@@ -11,7 +11,7 @@ deb-src http://packages.dotdeb.org squeeze all
 
     sudo "echo '#{sources}' >> /etc/apt/sources.list"
 
-    sudo "cd /tmp && wget http://www.dotdeb.org/dotdeb.gpg"
+    sudo "wget -P /tmp http://www.dotdeb.org/dotdeb.gpg"
     sudo "cat /tmp/dotdeb.gpg | apt-key add -"
 
     sudo "apt-get update"
