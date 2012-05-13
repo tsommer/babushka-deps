@@ -18,7 +18,6 @@ end
 dep "regenerate-assets.task", :root, :env do
   run {
     cd(root) {
-      shell "bundle exec rake assets:clear_cache RAILS_ENV=#{env}"
       shell "bundle exec rake assets:precompile RAILS_ENV=#{env}"
     }
   }
