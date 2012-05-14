@@ -31,11 +31,11 @@ end
 
 dep "bluepill-run-dir" do
   met? {
-    File.exists? "/var/run/bluepill"
+    File.exists? "/var/bluepill"
   }
   meet {
-    sudo "mkdir -p /var/run/bluepill"
-    sudo "chmod 777 /var/run/bluepill"
+    sudo "mkdir -p /var/bluepill"
+    sudo "chmod 777 /var/bluepill"
   }
 end
 
