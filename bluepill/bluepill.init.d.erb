@@ -24,8 +24,10 @@ APP_USER='su - <%= username %> -c'
 
 # Create run dir when necessary
 RUNDIR=/var/run/bluepill
-if [ ! -d RUNDIR ]; then mkdir -p RUNDIR fi
-chmod 777 RUNDIR
+if [ ! -d $RUNDIR ]; then
+  mkdir -p $RUNDIR
+  chmod 777 $RUNDIR
+fi
 
 case "$1" in
   start)
