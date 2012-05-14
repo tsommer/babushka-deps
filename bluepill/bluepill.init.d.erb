@@ -22,6 +22,11 @@ test -x $BABUSHKA_BIN || { echo "$BABUSHKA_BIN not installed";
 RVM_SETUP='source "$HOME/.rvm/scripts/rvm"'
 APP_USER='su - <%= username %> -c'
 
+# Create run dir when necessary
+RUNDIR=/var/run/bluepill
+if [ ! -d RUNDIR ]; then mkdir -p RUNDIR fi
+chmod 777 RUNDIR
+
 case "$1" in
   start)
     echo -n "Starting bluepill "

@@ -14,7 +14,6 @@ end
 
 dep "setup-bluepill", :username do
   requires "bluepill-gem",
-           "bluepill-run-dir",
            "bluepill.logrotate",
            "setup-pill-dir",
            "bluepill-startup-script".with(username)
@@ -26,16 +25,6 @@ dep "bluepill-gem" do
   }
   meet {
     shell "gem install bluepill --no-rdoc --no-ri"
-  }
-end
-
-dep "bluepill-run-dir" do
-  met? {
-    File.exists? "/var/run/bluepill"
-  }
-  meet {
-    sudo "mkdir -p /var/run/bluepill"
-    sudo "chmod 777 /var/run/bluepill"
   }
 end
 
