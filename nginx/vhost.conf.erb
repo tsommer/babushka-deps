@@ -60,6 +60,7 @@ server {
   location ~ ^/(assets)/  {
     root <%= path / 'public' %>;
     gzip_static on; # to serve pre-gzipped version
+    gzip_vary on;
     expires max;
     add_header Cache-Control public;
     add_header Last-Modified "";
