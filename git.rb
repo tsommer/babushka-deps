@@ -44,7 +44,7 @@ dep 'up to date.repo', :git_ref_data, :env do
     'benhoskings:on deploy'.with(ref_info[:old_id], ref_info[:new_id], ref_info[:branch], env),
 
     'stop-bluepill.task'.with(:username => shell('whoami')),
-    'benhoskings:app flagged for restart.task',
+    'benhoskings:unicorn restarted',
     'benhoskings:maintenance page down',
     'restart-delayed-job'.with(:root => ".", :env => env),
     'start-bluepill.task'.with(:username => shell('whoami')),
