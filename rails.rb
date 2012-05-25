@@ -23,6 +23,14 @@ dep "regenerate-assets.task", :root, :env do
   }
 end
 
+dep "expire-all-fragments.task", :root, :env do
+  run {
+    cd(root) {
+      shell "bundle exec rake cleanup:expire_fragments RAILS_ENV=#{env}"
+    }
+  }
+end
+
 dep "restart-delayed-job", :root, :env do
   met? {
     cd(root) {

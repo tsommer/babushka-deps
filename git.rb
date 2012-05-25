@@ -45,6 +45,7 @@ dep 'up to date.repo', :git_ref_data, :env do
 
     'stop-bluepill.task'.with(:username => shell('whoami')),
     'benhoskings:unicorn restarted',
+    'expire-all-fragments.task'.with(:root => '.', :env => env),
     'benhoskings:maintenance page down',
     'restart-delayed-job'.with(:root => ".", :env => env),
     'start-bluepill.task'.with(:username => shell('whoami')),
