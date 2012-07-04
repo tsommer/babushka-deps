@@ -8,25 +8,22 @@ dep "main" do
            "ack"
 
   # system
-  requires "iTerm.app",
-           "oh-my-zsh",
-           "Dropbox.app",
+  requires "Dropbox.app",
+           "Google Drive.app",
            "PCKeyboardHack.installer",
            "Alfred.app",
-           "Growl.installer",
            "iStat Menus.app",
-           "NeoOffice.installer",
            "AUSkey_Software.installer",
-           "Acorn.app",
-           "Perian.installer",
            "GrandPerspective.app",
-           "The Unarchiver.app"
-
-  # web
-  requires "Google Chrome.app",
+           "Google Chrome.app",
            "Firefox.app",
-           "Opera.app",
-           "Skype.app"
+           "Skype.app",
+           "Jawbone Updater.app"
+
+  # App Store
+  # The Unarchiver
+  # DoublePane
+  # Acorn
 
   # dev
   requires "rvm",
