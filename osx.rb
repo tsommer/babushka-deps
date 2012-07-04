@@ -1,37 +1,42 @@
-## Expand save panel by default
-#defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+dep "osx-settings.task" do
 
-## Expand print panel by default
-#defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+  run {
+    log_shell "Expand save panel by default",
+      "defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true"
 
-## Disable Resume system-wide
-#defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
+    log_shell "Expand print panel by default",
+      "defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true"
 
-## Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)
-#defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+    log_shell "Disable Resume system-wide",
+      "defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false"
 
-## Set a blazingly fast keyboard repeat rate
-#defaults write NSGlobalDomain KeyRepeat -int 0
+    log_shell "Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)",
+      "defaults write NSGlobalDomain AppleKeyboardUIMode -int 3"
 
-## Show all filename extensions in Finder
-#defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+    log_shell "Set a blazingly fast keyboard repeat rate",
+      "defaults write NSGlobalDomain KeyRepeat -int 0"
 
-## Show status bar in Finder
-#defaults write com.apple.finder ShowStatusBar -bool true
+    log_shell "Show all filename extensions in Finder",
+      "defaults write NSGlobalDomain AppleShowAllExtensions -bool true"
 
-## Disable the warning when changing a file extension
-#defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+    log_shell "Show status bar in Finder",
+      "defaults write com.apple.finder ShowStatusBar -bool true"
 
-## Automatically hide and show the Dock
-#defaults write com.apple.dock autohide -bool true
+    log_shell "Disable the warning when changing a file extension",
+      "defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false"
 
-## Enable Safari’s debug menu
-#defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+    log_shell "Automatically hide and show the Dock",
+      "defaults write com.apple.dock autohide -bool true"
 
-## Disable the Ping sidebar in iTunes
-#defaults write com.apple.iTunes disablePingSidebar -bool true
+    log_shell "Enable Safaris debug menu",
+      "defaults write com.apple.Safari IncludeInternalDebugMenu -bool true"
 
-## Disable all the other Ping stuff in iTunes
-#defaults write com.apple.iTunes disablePing -bool true
+    log_shell "Disable the Ping sidebar in iTunes",
+      "defaults write com.apple.iTunes disablePingSidebar -bool true"
+
+    log_shell "Disable all the other Ping stuff in iTunes",
+      "defaults write com.apple.iTunes disablePing -bool true"
+  }
+end
 
 

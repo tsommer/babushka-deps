@@ -1,6 +1,7 @@
 dep "main" do
 
   # load osx settings
+  requires "osx-settings.task"
 
   # packages
   requires "wget",
