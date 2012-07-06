@@ -18,20 +18,25 @@ dep "main" do
            "Google Chrome.app",
            "Firefox.app",
            "Skype.app",
-           "Jawbone Updater.app"
+           "Jawbone Updater.app",
+           "MenuBarFilter.app",
+           "Satellite Eyes.app",
+           "gfxCardStatus.app"
 
   # App Store
   # The Unarchiver
   # DoublePane
   # Acorn
+  # Fantastical
+  # HTTP Client
 
   # dev
-  requires "rvm",
-           "TextMate.app",
+  requires "iTerm.app",
+           "MacVim.app",
            "GitX.app",
-           "HTTP Client.app",
-           "VirtualBox.installer",
            "CoRD.app",
-           "Vico.app"
+           "Sequel Pro.app",
+           "VirtualBox.installer",
+           "oh-my-zsh"
 end
 

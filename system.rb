@@ -52,7 +52,7 @@ dep "AUSkey_Software.installer" do
 end
 
 dep "CoRD.app" do
-  source "http://internode.dl.sourceforge.net/project/cord/cord/0.5.4/CoRD_0.5.4.zip"
+  source "http://internode.dl.sourceforge.net/project/cord/cord/0.5.6/CoRD_0.5.6.zip"
 end
 
 dep "Acorn.app" do
@@ -113,5 +113,17 @@ end
 
 dep "Jawbone Updater.app" do
   source "https://mytalk.jawbone.com/store/dashboard/Jawbone_Updater-1.7.0.1.zip"
+end
+
+dep "MenuBarFilter.app" do
+  source "http://eece.github.com/MenuBarFilter/MenuBarFilter.zip"
+end
+
+dep "Satellite Eyes.app" do
+  source "http://satellite-eyes.s3.amazonaws.com/satellite-eyes-head.zip"
+end
+
+dep "gfxCardStatus.app" do
+  source "http://codykrieger.com/downloads/gfxCardStatus-2.2.1.zip"
 end
 

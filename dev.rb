@@ -1,3 +1,19 @@
+dep "iTerm.app" do
+  source "http://iterm2.googlecode.com/files/iTerm2-1_0_0_20120203.zip"
+end
+
+dep "oh-my-zsh" do
+  requires "benhoskings:zsh"
+
+  met? {
+    "~/.zshrc".p.exist?
+  }
+
+  meet {
+    shell "curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh"
+  }
+end
+
 dep "TextMate.app" do
   source "http://download.macromates.com/TextMate_1.5.10.zip"
 end
@@ -7,7 +23,7 @@ dep "Sublime Text 2.app" do
 end
 
 dep "Sequel Pro.app" do
-  source "http://sequel-pro.googlecode.com/files/sequel-pro-0.9.8.1.dmg"
+  source "http://sequel-pro.googlecode.com/files/Sequel_Pro_0.9.9.1.dmg"
 end
 
 dep "GitX.app" do
@@ -19,7 +35,7 @@ dep "HTTP Client.app" do
 end
 
 dep "VirtualBox.installer" do
-  source "http://download.virtualbox.org/virtualbox/4.0.6/VirtualBox-4.0.6-71344-OSX.dmg"
+  source "http://download.virtualbox.org/virtualbox/4.1.18/VirtualBox-4.1.18-78361-OSX.dmg"
   met? { "/Applications/VirtualBox.app".p.exists? }
 end
 
@@ -41,3 +57,8 @@ end
 dep "GitHub.app" do
   source "https://github-central.s3.amazonaws.com/mac/GitHub%20for%20Mac%201.0.zip"
 end
+
+dep "MacVim.app" do
+  source "http://cloud.github.com/downloads/b4winckler/macvim/MacVim-snapshot-64.tbz"
+end
+
