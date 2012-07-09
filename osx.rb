@@ -16,6 +16,9 @@ dep "osx-settings.task" do
     log_shell "Set a blazingly fast keyboard repeat rate",
       "defaults write NSGlobalDomain KeyRepeat -int 0"
 
+    log_shell "Set a short initial keyboard delay time",
+      "defaults write NSGlobalDomain InitialKeyRepeat -int 15"
+
     log_shell "Show all filename extensions in Finder",
       "defaults write NSGlobalDomain AppleShowAllExtensions -bool true"
 
@@ -36,7 +39,18 @@ dep "osx-settings.task" do
 
     log_shell "Disable all the other Ping stuff in iTunes",
       "defaults write com.apple.iTunes disablePing -bool true"
+
+    log_shell "Hide location services menu bar icon",
+      "launchctl unload -w /System/Library/LaunchAgents/com.apple.locationmenu.plist"
+
+    log_shell "Disable local Time Machine snapshots",
+      "sudo tmutil disablelocal"
+
+    log_shell "Disable hibernate",
+      "sudo pmset -a hibernatemode 0"
+
+    log_shell "Turn off sudden motion sensor",
+      "sudo pmset -a sms 0"
   }
 end
-
 

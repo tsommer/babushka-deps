@@ -5,7 +5,8 @@ dep "main" do
 
   # packages
   requires "wget",
-           "ack"
+           "ack",
+           "macvim"
 
   # system
   requires "Dropbox.app",
@@ -18,10 +19,11 @@ dep "main" do
            "Google Chrome.app",
            "Firefox.app",
            "Skype.app",
-           "Jawbone Updater.app",
+           "Jawbone Updater.installer",
            "MenuBarFilter.app",
            "Satellite Eyes.app",
-           "gfxCardStatus.app"
+           "gfxCardStatus.app",
+           "Broomstick.app"
 
   # App Store
   # The Unarchiver
@@ -32,7 +34,6 @@ dep "main" do
 
   # dev
   requires "iTerm.app",
-           "MacVim.app",
            "GitX.app",
            "CoRD.app",
            "Sequel Pro.app",

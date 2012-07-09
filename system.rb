@@ -111,8 +111,11 @@ dep "Raven.app" do
   source "http://raven.ipodtutofast.com/Raven.zip"
 end
 
-dep "Jawbone Updater.app" do
+dep "Jawbone Updater.installer" do
   source "https://mytalk.jawbone.com/store/dashboard/Jawbone_Updater-1.7.0.1.zip"
+  met? {
+    "/Applications/Jawbone Updater.app".p.exist?
+  }
 end
 
 dep "MenuBarFilter.app" do
@@ -125,5 +128,9 @@ end
 
 dep "gfxCardStatus.app" do
   source "http://codykrieger.com/downloads/gfxCardStatus-2.2.1.zip"
+end
+
+dep "Broomstick.app" do
+  source "http://downloads.zibity.com/Broomstick/Zips/Broomstick%200.9.1.zip"
 end
 
