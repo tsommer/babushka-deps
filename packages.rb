@@ -4,7 +4,11 @@ dep "ack", :template => "managed"
 dep "postfix", :template => "managed"
 dep "zip", :template => "managed"
 dep "unzip", :template => "managed"
-dep "macvim", :template => "managed"
+
+dep "macvim.bin" do
+  installs "macvim.managed"
+  provides "mvim"
+end
 
 dep "redis-server", :template => "managed"
 dep "sqlite3", :template => "managed"

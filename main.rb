@@ -3,11 +3,6 @@ dep "main" do
   # load osx settings
   requires "osx-settings.task"
 
-  # packages
-  requires "wget",
-           "ack",
-           "macvim"
-
   # system
   requires "Dropbox.app",
            "Google Drive.app",
@@ -39,5 +34,10 @@ dep "main" do
            "Sequel Pro.app",
            "VirtualBox.installer",
            "oh-my-zsh"
+
+  # packages
+  requires "wget",
+           "ack",
+           "macvim.bin"
 end
 
