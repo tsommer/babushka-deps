@@ -18,7 +18,8 @@ dep "main" do
            "MenuBarFilter.app",
            "Satellite Eyes.app",
            "gfxCardStatus.app",
-           "Broomstick.app"
+           "Broomstick.app",
+           "VLC.app"
 
   # App Store
   # The Unarchiver
@@ -26,6 +27,7 @@ dep "main" do
   # Acorn
   # Fantastical
   # HTTP Client
+  # FreeSpace
 
   # dev
   requires "iTerm.app",

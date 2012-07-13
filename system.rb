@@ -134,3 +134,7 @@ dep "Broomstick.app" do
   source "http://downloads.zibity.com/Broomstick/Zips/Broomstick%200.9.1.zip"
 end
 
+dep "VLC.app" do
+  source "http://aarnet.dl.sourceforge.net/project/vlc/2.0.2/macosx/vlc-2.0.2.dmg"
+end
+
