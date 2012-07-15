@@ -42,6 +42,7 @@ dep "main" do
            "ack",
            "macvim.bin",
            "jshint",
-           "coffee-script"
+           "coffee-script",
+           "csslint"
 end
 
