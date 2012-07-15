@@ -63,4 +63,5 @@ dep "MacVim.app" do
 end
 
 dep "jshint", :template => "npm"
+dep "coffee-script", :template => "npm"
 

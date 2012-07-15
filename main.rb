@@ -41,6 +41,7 @@ dep "main" do
   requires "wget",
            "ack",
            "macvim.bin",
-           "jshint"
+           "jshint",
+           "coffee-script"
 end
 
