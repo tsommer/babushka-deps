@@ -40,6 +40,7 @@ dep "main" do
   # packages
   requires "wget",
            "ack",
-           "macvim.bin"
+           "macvim.bin",
+           "jshint"
 end
 

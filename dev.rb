@@ -62,3 +62,5 @@ dep "MacVim.app" do
   source "http://cloud.github.com/downloads/b4winckler/macvim/MacVim-snapshot-64.tbz"
 end
 
+dep "jshint", :template => "npm"
+
