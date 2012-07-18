@@ -7,6 +7,7 @@ dep "main" do
   requires "Dropbox.app",
            "Google Drive.app",
            "PCKeyboardHack.installer",
+           "KeyRemap4MacBook.installer",
            "Alfred.app",
            "iStat Menus.app",
            "AUSkey_Software.installer",
