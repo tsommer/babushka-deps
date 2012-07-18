@@ -43,6 +43,7 @@ dep "main" do
            "macvim.bin",
            "jshint",
            "coffee-script",
-           "csslint"
+           "csslint",
+           "filepath"
 end
 

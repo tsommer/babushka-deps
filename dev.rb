@@ -66,3 +66,15 @@ dep "jshint", :template => "npm"
 dep "coffee-script", :template => "npm"
 dep "csslint", :template => "npm"
 
+dep "filepath" do
+  met? {
+    "/usr/local/bin/filepath".p.exists?
+  }
+
+  meet {
+    shell "wget https://github.com/downloads/chendo/filepath/filepath"
+    sudo "cp filepath /usr/local/bin"
+    sudo "chmod +x /usr/local/bin/filepath"
+  }
+end
+
