@@ -138,3 +138,7 @@ dep "VLC.app" do
   source "http://aarnet.dl.sourceforge.net/project/vlc/2.0.2/macosx/vlc-2.0.2.dmg"
 end
 
+dep "Transmission.app" do
+  source "http://download.transmissionbt.com/files/Transmission-2.60.dmg"
+end
+

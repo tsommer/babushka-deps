@@ -20,7 +20,8 @@ dep "main" do
            "Satellite Eyes.app",
            "gfxCardStatus.app",
            "Broomstick.app",
-           "VLC.app"
+           "VLC.app",
+           "Transmission.app"
 
   # App Store
   # The Unarchiver
