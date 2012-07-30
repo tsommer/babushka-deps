@@ -142,3 +142,7 @@ dep "Transmission.app" do
   source "http://download.transmissionbt.com/files/Transmission-2.60.dmg"
 end
 
+dep "Sparrow.app" do
+  source "http://www.google.com/landing/files/Sparrow-latest.zip"
+end
+
