@@ -146,3 +146,7 @@ dep "Sparrow.app" do
   source "http://www.google.com/landing/files/Sparrow-latest.zip"
 end
 
+dep "Mailplane.app" do
+  source "http://mailplaneapp.com/mpdownloads/builds/Mailplane_3_377.zip"
+end
+

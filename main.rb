@@ -22,15 +22,15 @@ dep "main" do
            "Broomstick.app",
            "VLC.app",
            "Transmission.app",
-           "Sparrow.app"
+           "Mailplane.app"
 
   # App Store
   # The Unarchiver
-  # DoublePane
   # Acorn
   # Fantastical
   # HTTP Client
   # FreeSpace
+  # Spectacle
 
   # dev
   requires "iTerm.app",
