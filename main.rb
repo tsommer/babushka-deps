@@ -21,8 +21,7 @@ dep "main" do
            "gfxCardStatus.app",
            "Broomstick.app",
            "VLC.app",
-           "Transmission.app",
-           "Mailplane.app"
+           "Transmission.app"
 
   # App Store
   # The Unarchiver
