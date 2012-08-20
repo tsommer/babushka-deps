@@ -28,7 +28,7 @@ dep "osx-settings.task" do
       "defaults write NSGlobalDomain AppleShowAllExtensions -bool true"
 
     log_shell "Show hidden files in Finder",
-      "defaults write com.apple.Finder AppleShowAllFiles -bool true"
+      "defaults write com.apple.Finder AppleShowAllFiles -bool false"
 
     log_shell "Show status bar in Finder",
       "defaults write com.apple.finder ShowStatusBar -bool true"
