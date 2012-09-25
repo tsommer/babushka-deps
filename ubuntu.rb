@@ -10,8 +10,7 @@ dep "ubuntu" do
   requires "ubuntu-core"
   requires "libxml2-dev.managed",
            "libxslt-dev.managed",
-           "libcurl4-openssl-dev.managed",
-           "libreadline6-dev.managed"
+           "libcurl4-openssl-dev.managed"
 end
 
 dep "ubuntu-mysql" do
