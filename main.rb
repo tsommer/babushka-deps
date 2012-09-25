@@ -46,6 +46,7 @@ dep "main" do
            "jshint",
            "coffee-script",
            "csslint",
-           "filepath"
+           "filepath",
+           "the_silver_searcher"
 end
 

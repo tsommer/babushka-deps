@@ -78,3 +78,7 @@ dep "filepath" do
   }
 end
 
+dep "the_silver_searcher", :template => "managed" do
+  provides 'ag'
+end
+
