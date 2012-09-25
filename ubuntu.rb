@@ -10,9 +10,7 @@ dep "ubuntu" do
   requires "ubuntu-core"
   requires "libxml2-dev.managed",
            "libxslt-dev.managed",
-           "libssl-dev.managed",
            "libcurl4-openssl-dev.managed",
-           "libreadline5-dev.managed",
            "libreadline6-dev.managed"
 end
 
