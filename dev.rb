@@ -82,3 +82,5 @@ dep "the_silver_searcher", :template => "managed" do
   provides 'ag'
 end
 
+dep "hub", :template => "managed"
+

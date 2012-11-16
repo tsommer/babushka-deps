@@ -47,6 +47,7 @@ dep "main" do
            "coffee-script",
            "csslint",
            "filepath",
-           "the_silver_searcher"
+           "the_silver_searcher",
+           "hub"
 end
 
