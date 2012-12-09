@@ -65,6 +65,7 @@ end
 dep "jshint", :template => "npm"
 dep "coffee-script", :template => "npm"
 dep "csslint", :template => "npm"
+dep "jwalk", :template => "npm"
 
 dep "filepath" do
   met? {

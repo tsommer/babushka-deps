@@ -48,6 +48,7 @@ dep "main" do
            "csslint",
            "filepath",
            "the_silver_searcher",
-           "hub"
+           "hub",
+           "jwalk"
 end
 
