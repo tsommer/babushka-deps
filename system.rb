@@ -146,3 +146,7 @@ dep "Mailplane.app" do
   source "http://mailplaneapp.com/mpdownloads/builds/Mailplane_3_377.zip"
 end
 
+dep "Bartender.app" do
+  source "http://www.macbartender.com/Demo/Bartender.zip"
+end
+

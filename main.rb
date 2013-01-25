@@ -19,7 +19,7 @@ dep "main" do
            "MenuBarFilter.app",
            "Satellite Eyes.app",
            "gfxCardStatus.app",
-           "Broomstick.app",
+           "Bartender.app",
            "VLC.app",
            "Transmission.app"
 
