@@ -1,5 +1,5 @@
 dep "Dropbox.app" do
-  source "https://ddr3luum8vl5r.cloudfront.net/Dropbox%201.4.9.dmg"
+  source "https://d1ilhw0800yew8.cloudfront.net/client/Z/Dropbox%201.6.16.dmg"
 end
 
 dep "Google Drive.app" do
@@ -14,14 +14,14 @@ dep "KeyRemap4MacBook.installer" do
 end
 
 dep "PCKeyboardHack.installer" do
-  source "http://pqrs.org/macosx/keyremap4macbook/files/PCKeyboardHack-7.4.0.dmg"
+  source "http://pqrs.org/macosx/keyremap4macbook/files/PCKeyboardHack-9.0.0.dmg"
   met? {
     "/Library/PreferencePanes/PCKeyboardHack.prefPane".p.exist?
   }
 end
 
 dep "Alfred.app" do
-  source "http://rwc.cachefly.net/alfred_1.2_220.dmg"
+  source "http://cachefly.alfredapp.com/alfred_1.3.2_265.zip"
 end
 
 dep "Growl.installer" do
@@ -30,7 +30,7 @@ dep "Growl.installer" do
 end
 
 dep "iStat Menus.app" do
-  source "http://s3.amazonaws.com/bjango/files/istatmenus3/istatmenus3.23.zip"
+  source "http://s3.amazonaws.com/bjango/files/istatmenus4/istatmenus4.03.zip"
 end
 
 dep "Jumpcut.app" do
@@ -49,10 +49,6 @@ dep "AUSkey_Software.installer" do
   met? {
     "~/Library/Application\ Support/AUSkey".p.exist?
   }
-end
-
-dep "CoRD.app" do
-  source "http://internode.dl.sourceforge.net/project/cord/cord/0.5.6/CoRD_0.5.6.zip"
 end
 
 dep "Acorn.app" do
@@ -78,7 +74,7 @@ dep "Vico.app" do
 end
 
 dep "GrandPerspective.app" do
-  source "http://aarnet.dl.sourceforge.net/project/grandperspectiv/grandperspective/1.5.0/GrandPerspective-1_5_0.dmg"
+  source "http://sourceforge.net/projects/grandperspectiv/files/grandperspective/1.5.1/GrandPerspective-1_5_1.dmg/download"
 end
 
 dep "The Unarchiver.app" do
@@ -94,7 +90,7 @@ dep "Google Chrome.app" do
 end
 
 dep "Firefox.app" do
-  source "http://download.cdn.mozilla.net/pub/mozilla.org/firefox/releases/13.0.1/mac/en-US/Firefox%2013.0.1.dmg"
+  source "http://download.cdn.mozilla.net/pub/mozilla.org/firefox/releases/18.0.1/mac/en-US/Firefox%2018.0.1.dmg"
 end
 
 dep "Opera.app" do
@@ -104,7 +100,7 @@ end
 dep "firefox", :template => "managed"
 
 dep "Skype.app" do
-  source "http://download.skype.com/macosx/Skype_5.8.0.865.dmg"
+  source "http://download.skype.com/macosx/Skype_6.1.59.2295.dmg"
 end
 
 dep "Raven.app" do
@@ -112,7 +108,7 @@ dep "Raven.app" do
 end
 
 dep "Jawbone Updater.installer" do
-  source "https://mytalk.jawbone.com/store/dashboard/Jawbone_Updater-1.7.0.1.zip"
+  source "http://mytalk.jawbone.com/jb2/mytalk/fileDownload?file=UPDATER"
   met? {
     "/Applications/Jawbone Updater.app".p.exist?
   }
@@ -127,7 +123,7 @@ dep "Satellite Eyes.app" do
 end
 
 dep "gfxCardStatus.app" do
-  source "http://codykrieger.com/downloads/gfxCardStatus-2.2.1.zip"
+  source "http://codykrieger.com/downloads/gfxCardStatus-2.3.zip"
 end
 
 dep "Broomstick.app" do
@@ -135,11 +131,11 @@ dep "Broomstick.app" do
 end
 
 dep "VLC.app" do
-  source "http://aarnet.dl.sourceforge.net/project/vlc/2.0.2/macosx/vlc-2.0.2.dmg"
+  source "http://waix.dl.sourceforge.net/project/vlc/2.0.5/macosx/vlc-2.0.5.dmg"
 end
 
 dep "Transmission.app" do
-  source "http://download.transmissionbt.com/files/Transmission-2.60.dmg"
+  source "http://transmission.cachefly.net/Transmission-2.76.dmg"
 end
 
 dep "Sparrow.app" do

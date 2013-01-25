@@ -30,12 +30,12 @@ dep "main" do
   # HTTP Client
   # FreeSpace
   # Spectacle
+  # Xcode
 
   # dev
   requires "iTerm.app",
            "GitX.app",
            "CoRD.app",
-           "Sequel Pro.app",
            "VirtualBox.installer",
            "oh-my-zsh"
 
@@ -46,7 +46,6 @@ dep "main" do
            "jshint",
            "coffee-script",
            "csslint",
-           "filepath",
            "the_silver_searcher",
            "hub",
            "jwalk"

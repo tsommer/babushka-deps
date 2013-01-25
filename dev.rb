@@ -1,5 +1,5 @@
 dep "iTerm.app" do
-  source "http://iterm2.googlecode.com/files/iTerm2-1_0_0_20120203.zip"
+  source "http://iterm2.googlecode.com/files/iTerm2-1_0_0_20120726.zip"
 end
 
 dep "oh-my-zsh" do
@@ -35,8 +35,12 @@ dep "HTTP Client.app" do
 end
 
 dep "VirtualBox.installer" do
-  source "http://download.virtualbox.org/virtualbox/4.1.18/VirtualBox-4.1.18-78361-OSX.dmg"
+  source "http://dlc.sun.com.edgesuite.net/virtualbox/4.2.6/VirtualBox-4.2.6-82870-OSX.dmg"
   met? { "/Applications/VirtualBox.app".p.exists? }
+end
+
+dep "CoRD.app" do
+  source "http://waix.dl.sourceforge.net/project/cord/cord/0.5.7/CoRD_0.5.7.zip"
 end
 
 dep "coffeescript.src" do
