@@ -150,3 +150,7 @@ dep "Bartender.app" do
   source "http://www.macbartender.com/Demo/Bartender.zip"
 end
 
+dep "Picasa Web Albums Uploader.app" do
+  source "http://universal-downloader.en.softonic.com/54000/54526/1ecf9/InstallPicasaWebAlbumsUploaders.dmg"
+end
+

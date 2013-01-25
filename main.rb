@@ -21,7 +21,8 @@ dep "main" do
            "gfxCardStatus.app",
            "Bartender.app",
            "VLC.app",
-           "Transmission.app"
+           "Transmission.app",
+           "Picasa Web Albums Uploader.app"
 
   # App Store
   # The Unarchiver
@@ -37,7 +38,9 @@ dep "main" do
            "GitX.app",
            "CoRD.app",
            "VirtualBox.installer",
-           "oh-my-zsh"
+           "oh-my-zsh",
+           "EVE.app",
+           "Shortcat.app"
 
   # packages
   requires "wget",

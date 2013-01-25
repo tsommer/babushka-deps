@@ -43,6 +43,14 @@ dep "CoRD.app" do
   source "http://waix.dl.sourceforge.net/project/cord/cord/0.5.7/CoRD_0.5.7.zip"
 end
 
+dep "EVE.app" do
+  source "https://s3.amazonaws.com/hotkeyeve/Downloads/EVE-latest.zip"
+end
+
+dep "Shortcat.app" do
+  source "http://updates.shortcatapp.com/v0.3.8/Shortcat.app.zip"
+end
+
 dep "coffeescript.src" do
   requires "benhoskings:nodejs.src"
 
