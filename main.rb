@@ -1,4 +1,4 @@
-dep "main" do
+dep "dev" do
 
   # load osx settings
   requires "osx-settings.task"
@@ -10,21 +10,15 @@ dep "main" do
            "KeyRemap4MacBook.installer",
            "Alfred.app",
            "iStat Menus.app",
-           "AUSkey_Software.installer",
-           "GrandPerspective.app",
            "Google Chrome.app",
            "Firefox.app",
            "Skype.app",
-           "Jawbone Updater.installer",
-           "MenuBarFilter.app",
            "Satellite Eyes.app",
+           "MenuBarFilter.app",
            "gfxCardStatus.app",
-           "Bartender.app",
-           "VLC.app",
-           "Transmission.app",
-           "Picasa Web Albums Uploader.app"
+           "Bartender.app"
 
-  # App Store
+  ## App Store
   # The Unarchiver
   # Acorn
   # Fantastical
@@ -52,5 +46,17 @@ dep "main" do
            "the_silver_searcher",
            "hub",
            "jwalk"
+end
+
+dep "main" do
+  requires "dev"
+
+  # system
+  requires "AUSkey_Software.installer",
+           "GrandPerspective.app",
+           "Jawbone Updater.installer",
+           "VLC.app",
+           "Transmission.app",
+           "Picasa Web Albums Uploader.app"
 end
 
