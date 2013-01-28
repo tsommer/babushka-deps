@@ -68,6 +68,12 @@ dep "osx-settings.task" do
 
     log_shell "Disable hibernate",
       "sudo pmset -a hibernatemode 0"
+    log_shell "Remove sleepimage",
+      "sudo rm /private/var/vm/sleepimage"
+    log_shell "Create empty sleepimage placeholder",
+      "sudo touch /private/var/vm/sleepimage"
+    log_shell "Make empty sleepimage unmodifiable",
+      "sudo chflags uchg /private/var/vm/sleepimage"
 
     log_shell "Turn off sudden motion sensor",
       "sudo pmset -a sms 0"
