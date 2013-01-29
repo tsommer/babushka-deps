@@ -154,3 +154,8 @@ dep "Picasa Web Albums Uploader.app" do
   source "http://universal-downloader.en.softonic.com/54000/54526/1ecf9/InstallPicasaWebAlbumsUploaders.dmg"
 end
 
+dep "Spectacle.app" do
+  source "http://spectacleapp.com/updates/downloads/Spectacle%200.7.zip"
+end
+
+

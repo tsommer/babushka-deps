@@ -15,7 +15,8 @@ dep "dev" do
            "Satellite Eyes.app",
            "MenuBarFilter.app",
            "gfxCardStatus.app",
-           "Bartender.app"
+           "Bartender.app",
+           "Spectacle.app"
 
   ## App Store
   # The Unarchiver
@@ -23,7 +24,6 @@ dep "dev" do
   # Fantastical
   # HTTP Client
   # FreeSpace
-  # Spectacle
   # Xcode
 
   # dev
