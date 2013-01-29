@@ -18,8 +18,5 @@ dep "redbubble" do
            "graphicsmagick-libmagick-dev-compat.managed",
            "libmagickwand-dev.managed",
            "rabbitmq-server.managed"
-
-  log_shell "Set mysql root password",
-    "mysql_secure_installation"
 end
 
