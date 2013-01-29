@@ -119,7 +119,7 @@ dep "MenuBarFilter.app" do
 end
 
 dep "Satellite Eyes.app" do
-  source "http://satellite-eyes.s3.amazonaws.com/satellite-eyes-head.zip"
+  source "http://satellite-eyes.s3.amazonaws.com/satellite-eyes-1.2.2.zip"
 end
 
 dep "gfxCardStatus.app" do
