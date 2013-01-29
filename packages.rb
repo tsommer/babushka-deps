@@ -12,7 +12,6 @@ end
 
 dep "redis-server", :template => "managed"
 dep "sqlite3", :template => "managed"
-dep "rabbitmq-server", :template => "managed"
 
 dep "sqlite" do
   requires "sqlite3", "libsqlite3-dev.managed"
@@ -29,6 +28,10 @@ end
 
 dep "openjdk-6-jdk.managed" do
   provides ["java", "javac"]
+end
+
+dep "rabbitmq-server.managed" do
+  provides "rabbitmq-server"
 end
 
 

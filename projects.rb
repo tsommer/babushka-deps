@@ -18,5 +18,7 @@ dep "redbubble" do
            "graphicsmagick-libmagick-dev-compat.managed",
            "libmagickwand-dev.managed",
            "rabbitmq-server.managed"
+
+  requires "mysql root password"
 end
 
