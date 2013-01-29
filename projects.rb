@@ -19,6 +19,6 @@ dep "redbubble" do
            "libmagickwand-dev.managed",
            "rabbitmq-server.managed"
 
-  requires "mysql root password"
+  requires "benhoskings:mysql root password"
 end
 
