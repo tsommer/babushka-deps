@@ -11,3 +11,12 @@ dep "cafeconcierge-production" do
            "benhoskings:mysql access"
 end
 
+dep "redbubble" do
+  requires "ubuntu-java"
+
+  requires "libgeoip-dev.managed",
+           "graphicsmagick-libmagick-dev-compat.managed",
+           "libmagickwand-dev.managed",
+           "rabbitmq-server.managed"
+end
+
