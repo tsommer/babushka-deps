@@ -12,6 +12,7 @@ end
 
 dep "redis-server", :template => "managed"
 dep "sqlite3", :template => "managed"
+dep "rabbitmq-server", :template => "managed"
 
 dep "sqlite" do
   requires "sqlite3", "libsqlite3-dev.managed"
@@ -119,6 +120,24 @@ end
 dep "libpq-dev.managed" do
   met? {
     "/usr/include/postgresql/libpq-fe.h".p.exist?
+  }
+end
+
+dep "libgeoip-dev.managed" do
+  met? {
+    "/usr/include/GeoIP.h".p.exist?
+  }
+end
+
+dep "graphicsmagick-libmagick-dev-compat.managed" do
+  met? {
+    "/usr/bin/Magick-config".p.exist?
+  }
+end
+
+dep "libmagickwand-dev.managed" do
+  met? {
+    "/usr/include/ImageMagick/wand/MagickWand.h".p.exist?
   }
 end
 
