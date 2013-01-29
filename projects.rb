@@ -19,6 +19,7 @@ dep "redbubble" do
            "libmagickwand-dev.managed",
            "rabbitmq-server.managed"
 
-  requires "benhoskings:mysql root password"
+  log_shell "Set mysql root password",
+    "mysql_secure_installation"
 end
 
