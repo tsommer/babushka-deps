@@ -39,6 +39,7 @@ dep "dev" do
   requires "wget",
            "ack",
            "macvim.bin",
+           "node",
            "jshint",
            "coffee-script",
            "csslint",
