@@ -23,7 +23,7 @@ dep "Sublime Text 2.app" do
 end
 
 dep "Sequel Pro.app" do
-  source "http://sequel-pro.googlecode.com/files/Sequel_Pro_0.9.9.1.dmg"
+  source "http://sequel-pro.googlecode.com/files/sequel-pro-1.0.1.dmg"
 end
 
 dep "GitX.app" do

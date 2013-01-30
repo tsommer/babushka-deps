@@ -33,7 +33,8 @@ dep "dev" do
            "VirtualBox.installer",
            "oh-my-zsh",
            "EVE.app",
-           "Shortcat.app"
+           "Shortcat.app",
+           "Sequel Pro.app"
 
   # packages
   requires "wget",
