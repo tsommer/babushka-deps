@@ -30,3 +30,12 @@ dep "ubuntu-java" do
 
   requires "openjdk-6-jdk.managed"
 end
+
+dep "set mysql root password", :new_password do
+  raw_shell "mysqladmin -u root -p password #{new_password}"
+end
+
+dep "install and use ruby with rvm", :version do
+  raw_shell "rvm install #{version} && rvm use #{version} --default"
+end
+
