@@ -1,7 +1,7 @@
 dep "setup app", :new_password, :version, :app_name, :number_of_test_dbs do
-  requires "set mysql root password".with(new_password),
-           "install and use ruby with rvm".with(version),
+  requires "install and use ruby with rvm".with(version),
            "bundle app",
+           "set mysql root password".with(new_password),
            "create app dbs".with(app_name, number_of_test_dbs, new_password)
 end
 
