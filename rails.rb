@@ -77,3 +77,24 @@ dep "start-bluepill.task", :username do
   }
 end
 
+dep "bundle app" do
+  shell "bundle"
+end
+
+dep "create app dbs", :app_name, :number_of_test_dbs, :new_password do
+  create_db = "CREATE DATABASE IF NOT EXISTS"
+
+  log_shell "Create development DB",
+    "mysql -u root --password=#{new_password} -e '#{create_db} #{app_name}_development'"
+
+  "#{number_of_test_dbs}".to_i.times do |i|
+    index           = i + 1
+    index_to_append = (index == 1 ? "" : index.to_s)
+
+    log_shell "Create test DB #{index}",
+      "mysql -u root --password=#{new_password} -e '#{create_db} #{app_name}_test#{index_to_append}'"
+    log_shell "Create cucumber DB #{index}",
+      "mysql -u root --password=#{new_password} -e '#{create_db} #{app_name}_cucumber#{index_to_append}'"
+  end
+end
+
