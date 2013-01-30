@@ -29,3 +29,12 @@ dep "redbubble" do
   requires "setup app"
 end
 
+dep "imagehaus" do
+  requires "ubuntu-mysql"
+
+  requires "graphicsmagick-libmagick-dev-compat.managed",
+           "libmagickwand-dev.managed"
+
+  requires "setup app"
+end
+
