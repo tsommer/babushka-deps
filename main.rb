@@ -61,3 +61,9 @@ dep "main" do
            "Picasa Web Albums Uploader.app"
 end
 
+dep "rboffice" do
+  requires "dev"
+
+  requires "Spotify.app"
+end
+

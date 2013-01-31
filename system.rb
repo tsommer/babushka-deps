@@ -158,4 +158,7 @@ dep "Spectacle.app" do
   source "http://spectacleapp.com/updates/downloads/Spectacle%200.7.zip"
 end
 
+dep "Spotify.app" do
+  source "http://download.spotify.com/SpotifyInstaller.zip"
+end
 
