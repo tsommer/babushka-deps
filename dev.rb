@@ -74,6 +74,10 @@ dep "MacVim.app" do
   source "http://cloud.github.com/downloads/b4winckler/macvim/MacVim-snapshot-64.tbz"
 end
 
+dep "Omnigraffle.app" do
+  source "http://downloads2.omnigroup.com/software/MacOSX/10.6/OmniGraffle-5.4.2.dmg"
+end
+
 dep "jshint", :template => "npm"
 dep "coffee-script", :template => "npm"
 dep "csslint", :template => "npm"

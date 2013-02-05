@@ -64,6 +64,7 @@ end
 dep "rboffice" do
   requires "dev"
 
-  requires "Spotify.app"
+  requires "Spotify.app",
+           "Omnigraffle.app"
 end
 
