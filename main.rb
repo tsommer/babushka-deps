@@ -6,7 +6,7 @@ dep "dev" do
   # system
   requires "Dropbox.app",
            "Google Drive.app",
-           "KeyRemap4MacBook.installer",
+           "KeyRemap4MacBook.app",
            "Alfred.app",
            "iStat Menus.app",
            "Google Chrome.app",

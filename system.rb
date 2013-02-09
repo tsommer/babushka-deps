@@ -6,11 +6,8 @@ dep "Google Drive.app" do
   source "https://dl-ssl.google.com/drive/installgoogledrive.dmg"
 end
 
-dep "KeyRemap4MacBook.installer" do
+dep "KeyRemap4MacBook.app" do
   source "http://pqrs.org/macosx/keyremap4macbook/files/KeyRemap4MacBook-7.8.0.dmg"
-  met? {
-    "/Library/PreferencePanes/KeyRemap4MacBook.prefPane".p.exist?
-  }
 end
 
 dep "PCKeyboardHack.installer" do
