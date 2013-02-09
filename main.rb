@@ -16,7 +16,8 @@ dep "dev" do
            "MenuBarFilter.app",
            "gfxCardStatus.app",
            "Bartender.app",
-           "Spectacle.app"
+           "Spectacle.app",
+           "Skitch.app"
 
   ## App Store
   # The Unarchiver

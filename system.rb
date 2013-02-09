@@ -159,3 +159,7 @@ dep "Spotify.app" do
   source "http://download.spotify.com/SpotifyInstaller.zip"
 end
 
+dep "Skitch.app" do
+  source "http://cdn1.evernote.com/skitch/mac/release/Skitch-2.0.4.zip"
+end
+
