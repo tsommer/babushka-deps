@@ -60,6 +60,9 @@ dep "main" do
            "VLC.app",
            "Transmission.app",
            "Picasa Web Albums Uploader.app"
+
+  # dev
+  requires "imagemagick.managed"
 end
 
 dep "rboffice" do
