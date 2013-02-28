@@ -69,6 +69,6 @@ dep "rboffice" do
   requires "dev"
 
   requires "Spotify.app",
-           "Omnigraffle.app"
+           "ghostscript"
 end
 
