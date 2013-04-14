@@ -1,4 +1,5 @@
 # deps with bins
+dep "build-essential", :template => "managed"
 dep "wget", :template => "managed"
 dep "ack", :template => "managed"
 dep "postfix", :template => "managed"
