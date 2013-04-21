@@ -47,7 +47,8 @@ dep "dev" do
            "csslint",
            "the_silver_searcher",
            "hub",
-           "jwalk"
+           "jwalk",
+           "ctags"
 end
 
 dep "main" do

@@ -102,4 +102,6 @@ end
 dep "node", :template => "managed"
 dep "hub", :template => "managed"
 dep "ghostscript", :template => "managed"
+dep "ctags", :template => "managed"
+
 
