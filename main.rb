@@ -48,8 +48,7 @@ dep "dev" do
            "the_silver_searcher",
            "hub",
            "jwalk",
-           "ctags",
-           "python"
+           "ctags"
 end
 
 dep "main" do
