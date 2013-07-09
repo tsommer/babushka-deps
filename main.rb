@@ -42,6 +42,7 @@ dep "dev" do
            "ack",
            "macvim.bin",
            "node",
+           "python",
            "jshint",
            "coffee-script",
            "csslint",
@@ -49,7 +50,8 @@ dep "dev" do
            "hub",
            "jwalk",
            "ctags",
-           "vim"
+           "vim",
+           "colout.pip"
 end
 
 dep "main" do

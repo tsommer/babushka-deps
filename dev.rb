@@ -99,10 +99,18 @@ dep "the_silver_searcher", :template => "managed" do
   provides 'ag'
 end
 
+dep "colout.pip" do
+  provides "colout"
+
+  meet {
+    sudo "pip install colout"
+  }
+end
+
 dep "node", :template => "managed"
 dep "hub", :template => "managed"
 dep "ghostscript", :template => "managed"
 dep "ctags", :template => "managed"
 dep "vim", :template => "managed"
-
+dep "python", :template => "managed"
 
