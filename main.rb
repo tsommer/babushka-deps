@@ -29,6 +29,7 @@ dep "dev" do
 
   # dev
   requires "iTerm.app",
+           "zsh",
            "GitX.app",
            "CoRD.app",
            "VirtualBox.installer",

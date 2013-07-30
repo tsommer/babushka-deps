@@ -107,10 +107,17 @@ dep "colout.pip" do
   }
 end
 
+dep "zsh", :template => "managed" do
+  provides "zsh"
+
+  meet {
+    shell "brew install --disable-etcdir zsh"
+  }
+end
+
 dep "node", :template => "managed"
 dep "hub", :template => "managed"
 dep "ghostscript", :template => "managed"
 dep "ctags", :template => "managed"
 dep "vim", :template => "managed"
 dep "python", :template => "managed"
-
