@@ -52,7 +52,8 @@ dep "dev" do
            "jwalk",
            "ctags",
            "vim",
-           "colout.pip"
+           "colout.pip",
+           "haskell-platform"
 end
 
 dep "main" do

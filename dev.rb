@@ -115,6 +115,10 @@ dep "zsh", :template => "managed" do
   }
 end
 
+dep "haskell-platform", :template => "managed" do
+  provides "ghci"
+end
+
 dep "node", :template => "managed"
 dep "hub", :template => "managed"
 dep "ghostscript", :template => "managed"
