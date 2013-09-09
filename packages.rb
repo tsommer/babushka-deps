@@ -1,10 +1,13 @@
 # deps with bins
-dep "build-essential", :template => "managed"
 dep "wget", :template => "managed"
 dep "ack", :template => "managed"
 dep "postfix", :template => "managed"
 dep "zip", :template => "managed"
 dep "unzip", :template => "managed"
+
+dep "build-essential", :template => "managed" do
+  provides "gcc"
+end
 
 dep "macvim.bin" do
   installs "macvim.managed"
