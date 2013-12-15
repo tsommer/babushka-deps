@@ -4,8 +4,7 @@ dep "dev" do
   requires "osx-settings.task"
 
   # system
-  requires "Dropbox.app",
-           "Google Drive.app",
+  requires "Google Drive.app",
            "KeyRemap4MacBook.app",
            "Alfred.app",
            "iStat Menus.app",
