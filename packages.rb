@@ -38,6 +38,11 @@ dep "rabbitmq-server.managed" do
   provides "rabbitmq-server"
 end
 
+dep "brew-cask", :template => "managed" do
+  met? {
+    `brew cask`.include? "Caskroom"
+  }
+end
 
 # System deps
 dep "libxml2-dev.managed" do
@@ -73,7 +78,7 @@ end
 dep "libreadline5-dev.managed" do
   met? {
     "/usr/lib/libreadline.so".p.exist?
-  }  
+  }
 end
 
 dep "libreadline6-dev.managed" do
@@ -148,3 +153,8 @@ dep "libmagickwand-dev.managed" do
   }
 end
 
+# Casks
+dep "qlcolorcode", :template => "personal:cask"
+dep "qlstephen", :template => "personal:cask"
+dep "quicklook-json", :template => "personal:cask"
+dep "quicklook-csv", :template => "personal:cask"

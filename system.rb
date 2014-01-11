@@ -163,3 +163,19 @@ dep "Skitch.app" do
   source "http://cdn1.evernote.com/skitch/mac/release/Skitch-2.0.4.zip"
 end
 
+dep "brew tap", :repo do
+  meet {
+    shell "brew tap #{repo}"
+  }
+
+  met? {
+    `brew tap`.include? repo
+  }
+end
+
+dep "ql-packages" do
+  requires "qlcolorcode",
+           "qlstephen",
+           "quicklook-json",
+           "quicklook-csv"
+end

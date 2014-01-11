@@ -35,7 +35,8 @@ dep "dev" do
            "oh-my-zsh",
            "EVE.app",
            "Shortcat.app",
-           "Sequel Pro.app"
+           "Sequel Pro.app",
+           "ql-packages"
 
   # packages
   requires "wget",
