@@ -1,10 +1,22 @@
-# https://github.com/phinze/homebrew-cask
+dep "brew-cask", :template => "managed" do
+  met? {
+    `brew cask`.include? "Caskroom"
+  }
+end
+
 meta :cask do
+  accepts_value_for :cask
+
+  def ensure_cask
+    return if `brew tap`.include?(cask)
+    shell "brew tap #{cask}"
+  end
+
   template {
-    requires "brew tap".with("phinze/cask"),
-             "brew-cask"
+    requires "brew-cask"
 
     meet {
+      ensure_cask
       shell "brew cask install #{name}"
     }
 
@@ -13,5 +25,3 @@ meta :cask do
     }
   }
 end
-
-

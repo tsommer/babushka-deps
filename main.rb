@@ -36,7 +36,8 @@ dep "dev" do
            "EVE.app",
            "Shortcat.app",
            "Sequel Pro.app",
-           "ql-packages"
+           "ql-packages",
+           "launchrocket"
 
   # packages
   requires "wget",
