@@ -17,11 +17,11 @@ meta :cask do
 
     meet {
       ensure_cask
-      shell "brew install #{name}"
+      shell "brew cask install #{name}"
     }
 
     met? {
-      `brew list`.include? name
+      `brew cask list`.include? name
     }
   }
 end
