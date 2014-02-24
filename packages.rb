@@ -164,3 +164,7 @@ end
 dep "launchrocket", :template => "personal:cask" do
   cask "jimbojsb/launchrocket"
 end
+
+dep "massren", :template => "personal:cask" do
+  cask "laurent22/homebrew-massren"
+end
