@@ -37,7 +37,8 @@ dep "dev" do
            "Shortcat.app",
            "Sequel Pro.app",
            "ql-packages",
-           "launchrocket"
+           "launchrocket",
+           "massren"
 
   # packages
   requires "wget",
