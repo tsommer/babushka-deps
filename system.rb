@@ -164,7 +164,8 @@ dep "Skitch.app" do
 end
 
 dep "ql-packages" do
-  requires "qlcolorcode",
+  requires "brew-cask",
+           "qlcolorcode",
            "qlstephen",
            "quicklook-json",
            "quicklook-csv"

@@ -148,6 +148,12 @@ dep "libmagickwand-dev.managed" do
 end
 
 # Casks
+dep "brew-cask", :template => "managed" do
+  met? {
+    `brew cask`.include? "Caskroom"
+  }
+end
+
 dep "qlcolorcode", :template => "personal:cask" do
   cask "phinze/cask"
 end
@@ -165,6 +171,6 @@ dep "launchrocket", :template => "personal:cask" do
   cask "jimbojsb/launchrocket"
 end
 
-dep "massren", :template => "personal:cask" do
+dep "massren", :template => "personal:brew" do
   cask "laurent22/homebrew-massren"
 end
