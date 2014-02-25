@@ -25,6 +25,7 @@ dep "dev" do
   # HTTP Client
   # FreeSpace
   # Xcode
+  # Dash
 
   # dev
   requires "iTerm.app",
