@@ -4,6 +4,7 @@ dep "ack", :template => "managed"
 dep "postfix", :template => "managed"
 dep "zip", :template => "managed"
 dep "unzip", :template => "managed"
+dep "hr", :template => "managed"
 
 dep "build-essential", :template => "managed" do
   provides "gcc"

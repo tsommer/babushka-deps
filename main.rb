@@ -39,7 +39,8 @@ dep "dev" do
            "Sequel Pro.app",
            "ql-packages",
            "launchrocket",
-           "massren"
+           "massren",
+           "hr"
 
   # packages
   requires "wget",
