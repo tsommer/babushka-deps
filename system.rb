@@ -163,6 +163,10 @@ dep "Skitch.app" do
   source "http://cdn1.evernote.com/skitch/mac/release/Skitch-2.0.4.zip"
 end
 
+dep "Flux.app" do
+  source "https://justgetflux.com/mac/Flux.zip"
+end
+
 dep "ql-packages" do
   requires "brew-cask",
            "qlcolorcode",

@@ -16,7 +16,8 @@ dep "dev" do
            "gfxCardStatus.app",
            "Bartender.app",
            "Spectacle.app",
-           "Skitch.app"
+           "Skitch.app",
+           "Flux.app"
 
   ## App Store
   # The Unarchiver
